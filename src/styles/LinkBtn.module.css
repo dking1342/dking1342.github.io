@@ -1,0 +1,25 @@
+.linkbtn{
+  outline:none;
+  border:none;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.25rem;
+  cursor: pointer;
+  position:relative;
+}
+.linkbtn:hover{
+  filter:brightness(1.1);
+  transition:filter 0.5s ease;
+}
+.linkbtn:not(:hover){
+  filter:brightness(1);
+  transition:filter 0.5s ease;
+}
+
+.cornerSquare{
+  position: absolute;
+  right:0;
+  bottom:0;
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  filter:brightness(0.75);
+}

@@ -1,0 +1,28 @@
+.container{
+  /* height: 100%; */
+  /* width: 100%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position:relative;
+  z-index: 3;
+}
+.overlay{
+  width: 100%;
+  height: inherit;
+  clip-path: polygon(60% 60%, 100% 45%, 100% 100%, 0 100%, 0 50%);
+  position:absolute;
+  inset:0;
+  z-index: -1;
+  background-color: var(--accent-color);
+}
+.overlay::after{
+  content: "";
+  background-image: url(/bg.png);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
