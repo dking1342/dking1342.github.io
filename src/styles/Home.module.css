@@ -231,7 +231,7 @@
 
   /* slanted section */
   .infoSectionSlanted{
-    height: 150vh;
+    height: 200vh;
   }
   .slantedContainer{
     display: flex;
