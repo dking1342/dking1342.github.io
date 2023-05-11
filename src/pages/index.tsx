@@ -108,6 +108,7 @@ export default function Home({ mobileToggle }: Props) {
     <>
       <Head>
         <title>Mission Compassion</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="mission compassion" />
       </Head>
       <main className={styles.homePage}>
