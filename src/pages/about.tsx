@@ -33,8 +33,10 @@ const About = (props: Props) => {
                 <Image
                   src="/heart-logo-transparent.png"
                   alt="mission compassion logo"
-                  fill
-                />
+                  height={100}
+                  width={100}
+                  style={{ height: '100%', width: '100%' }}
+                />{' '}
               </div>
             </div>
           </Hero>
@@ -91,7 +93,12 @@ const About = (props: Props) => {
               </div>
               <div className={styles.linkContainer}>
                 <p>FIND OUT WHY WE ARE SO PASSIONATE</p>
-                <LinkBtn href="/" text="learn more" size="lg" theme="accent" />
+                <LinkBtn
+                  href="/about/overview"
+                  text="learn more"
+                  size="lg"
+                  theme="accent"
+                />
               </div>
             </div>
           </ClipDoubleSide>
@@ -131,8 +138,14 @@ const About = (props: Props) => {
               <Image
                 src={'/teamwork-1.png'}
                 alt="teamwork image"
-                fill
-                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                width={100}
+                height={100}
+                style={{
+                  objectFit: 'cover',
+                  objectPosition: 'center',
+                  width: '100%',
+                  height: '100%',
+                }}
                 priority
               />
             </div>
@@ -142,7 +155,12 @@ const About = (props: Props) => {
               WE VALUE EACH AND EVERY ONE OF AND COULDN’T DO IT OUR TEAM MEMBERS
               WITHOUT THEM
             </p>
-            <LinkBtn href="/" text="meet team" size="lg" theme="accent" />
+            <LinkBtn
+              href="/about/team"
+              text="meet team"
+              size="lg"
+              theme="accent"
+            />
           </div>
         </section>
         <section className={styles.donateSection}>
@@ -168,8 +186,14 @@ const About = (props: Props) => {
               <Image
                 src={'/faq-1.png'}
                 alt="faq image"
-                fill
-                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                width={100}
+                height={100}
+                style={{
+                  objectFit: 'cover',
+                  objectPosition: 'center',
+                  height: '100%',
+                  width: '100%',
+                }}
                 priority
               />
             </div>
@@ -187,12 +211,11 @@ const About = (props: Props) => {
             <ClipVInner
               src="/docs-1.png"
               alt="documents section image"
-              title="OUR DOCUMENTS"
-              body="We have strived to be transparent with our compliant and fully
-              company documents to earn your trust"
+              title="OPERATIONS"
+              body="Our operations are geared towards maximizing the animal care we provide and being transparent to the people that put their trust in us"
               href="/"
-              btnText="see docs"
-              btnTheme="accent"
+              btnText="SEE OPERATIONS"
+              btnTheme="primary"
             />
           </ClipV>
         </section>

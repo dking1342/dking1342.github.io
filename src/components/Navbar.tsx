@@ -27,10 +27,10 @@ const Navbar = ({
   onMobileToggle,
 }: Props) => {
   const navitems = [
-    { id: 1, name: 'about', href: 'about' },
-    { id: 2, name: 'impact', href: 'impact' },
-    { id: 3, name: 'animal care', href: 'animal-care' },
-    { id: 4, name: 'get involved', href: 'get-involved' },
+    { id: 1, name: 'about', href: '/about' },
+    { id: 2, name: 'impact', href: '/impact' },
+    { id: 3, name: 'animal care', href: '/animal-care' },
+    { id: 4, name: 'get involved', href: '/get-involved' },
   ];
   const mobileitems = [
     {

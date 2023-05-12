@@ -1,0 +1,157 @@
+.teamPage{
+  display: flex;
+  flex-direction: column;
+  gap:2rem;
+}
+.heroSection{
+  height: 100vh;
+}
+.heroHeaderContainer{
+  height: 350px;
+  width: 350px;
+  position: relative;
+  text-transform: uppercase;
+  left: 25%;
+  top: 25%;
+  transform: translate(-25%,-25%);
+}
+.heroHeaderContainer h1{
+  position: absolute;
+  left: -109px;
+  bottom: 105px;
+  transform: rotate(270deg);
+  font-size: 4.5rem;
+  color: #15fefe;
+}
+.heroHeaderContainer h2{
+  position: absolute;
+  font-size: 3.5rem;
+  letter-spacing: 7px;
+  color: var(--accent-color);
+}
+.heroHeaderContainer h3{
+  position: absolute;
+  left: -24px;
+  bottom: 95px;
+  transform: rotate(270deg);
+  font-size: 3rem;
+  letter-spacing: 8px;
+  color: var(--accent-color);
+}
+.heroHeaderContainer h4{
+  position: absolute;
+  top: 51px;
+  left: 60px;
+  font-size: 3.5rem;
+  color: var(--secondary-color);  
+}
+.heroHeaderContainer h5{
+  position: absolute;
+  top: 115px;
+  left: 116px;
+  font-size: 2.5rem;
+  letter-spacing: 8px;
+  color: #fdfd1c;  
+}
+.heroImageContainer{
+  position: absolute;
+  height: 190px;
+  width: 190px;
+  left: 118px;
+  top: 155px;
+}
+
+/* mission section styles */
+.missionSection{
+  height: fit-content;
+  padding: 3rem;
+}
+
+/* leadership styles */
+.leadershipSection{
+  height: fit-content;
+}
+.leadershipContainer{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15rem;
+  margin-top: 5rem;
+  align-items: center;
+  padding-bottom:4rem; 
+}
+.leadershipContainer h1{
+  font-size: clamp(40px,8vw,80px);
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--accent-color);
+}
+.leadershipCardsContainer{
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+  justify-items: center;
+  max-width: 1000px;
+  width: 100%;
+  gap: 9rem;
+}
+.leadershipCardContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.leadershipCardContentContainer{
+  width: 100%;
+  color: var(--secondary-color);
+  text-align: center;
+}
+.leadershipCardContentContainer h2{
+  font-size: 2rem;
+}
+.leadershipCardContentContainer h3{
+  margin-top: 1rem;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+/* team quotes section styles */
+.teamQuotesSection{
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+  align-items: center;
+  padding: 3rem;
+  margin-top: 5rem;
+}
+.teamQuotesSection h1{
+  font-size: clamp(40px,5vw,80px);
+  text-transform: uppercase;
+  text-align: center;
+}
+.quotesLinkContainer{
+  width: 100%;
+  font-size: clamp(36px, 3vw,50px);
+  text-align: center;
+  text-transform: uppercase;
+  max-width: 350px;  
+}
+.quotesLinkContainer a{
+  border-bottom: 5px solid var(--accent-color);
+}
+
+/* stats section styles */
+.infoCardsContainer{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  padding: 3rem;
+  gap: 3rem;
+}
+.infoCardContainer:nth-child(1){
+  align-self:flex-end;
+}
+

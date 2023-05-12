@@ -1,0 +1,165 @@
+.overviewPage{
+  display: flex;
+  flex-direction: column;
+  gap:2rem;
+}
+.heroSection{
+  height: 100vh;
+}
+.heroHeaderContainer{
+  height: 350px;
+  width: 350px;
+  position: relative;
+  text-transform: uppercase;
+  left: 25%;
+  top: 25%;
+  transform: translate(-25%,-25%);
+}
+.heroHeaderContainer h1{
+  position: absolute;
+  left: -109px;
+  bottom: 105px;
+  transform: rotate(270deg);
+  font-size: 4.5rem;
+  color: #15fefe;
+}
+.heroHeaderContainer h2{
+  position: absolute;
+  font-size: 3.5rem;
+  letter-spacing: 7px;
+  color: var(--accent-color);
+}
+.heroHeaderContainer h3{
+  position: absolute;
+  left: -24px;
+  bottom: 95px;
+  transform: rotate(270deg);
+  font-size: 3rem;
+  letter-spacing: 8px;
+  color: var(--accent-color);
+}
+.heroHeaderContainer h4{
+  position: absolute;
+  top: 51px;
+  left: 60px;
+  font-size: 3.5rem;
+  color: var(--secondary-color);  
+}
+.heroHeaderContainer h5{
+  position: absolute;
+  top: 115px;
+  left: 116px;
+  font-size: 2.5rem;
+  letter-spacing: 8px;
+  color: #fdfd1c;  
+}
+.heroImageContainer{
+  position: absolute;
+  height: 190px;
+  width: 190px;
+  left: 118px;
+  top: 155px;
+}
+
+/* mission section styles */
+.missionSection{
+  height: fit-content;
+  padding: 3rem;
+}
+
+/* governance section styles  */
+.governanceSection{
+  height: fit-content;
+}
+.doubleSideContainer{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2,minmax(300px,1fr));
+  grid-template-rows: repeat(3,minmax(300px,1fr));
+  align-items: center;
+  justify-items: center;
+  gap: 3rem;  
+  padding:5rem;
+}
+.doubleSideCardContainer:nth-child(1){
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.doubleSideCardContainer:nth-child(2){
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.doubleSideCardContainer:nth-child(3){
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+
+/* core values section styles */
+.coreValuesSection{
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+.coreValuesSection h2{
+  text-transform: uppercase;
+  font-size: clamp(36px,5vw,50px);
+}
+.coreValuesContainer{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  width: 100%;
+  padding: 3rem;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  gap:3rem;
+}
+.coreValueContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 250px;
+  height: 350px;
+}
+.coreValueContentContainer{
+  display: flex;
+  flex-direction: column;
+  gap:1rem;
+}
+.coreValueContentContainer h3{
+  text-transform: uppercase;
+  font-size: 1.25;
+  font-weight: 700;
+  color:var(--accent-color);
+}
+
+/* logo image section styles */
+.logoImageSection{
+  height: 70vh;
+}
+.logoImageContainer{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  max-width: 1000px;
+  max-height: 700px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+
+
+@media (max-width:800px) {
+    /* governance section */
+    .doubleSideContainer{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+}
+

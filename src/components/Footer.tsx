@@ -31,49 +31,67 @@ const Footer = (props: Props) => {
   const currentYear = new Date().getFullYear();
   const sitemap: Sitemaps = [
     {
-      id: 1,
-      href: 'about',
+      id: Math.floor(Math.random() * 10000),
+      href: '/about',
       link: 'about',
       sublist: [
-        { id: 1, href: '/', link: 'overview' },
-        { id: 2, href: '/', link: 'team' },
-        { id: 3, href: '/', link: 'operations' },
-        { id: 4, href: '/', link: 'faqs' },
+        {
+          id: Math.floor(Math.random() * 10000),
+          href: '/about/overview',
+          link: 'overview',
+        },
+        {
+          id: Math.floor(Math.random() * 10000),
+          href: '/about/team',
+          link: 'team',
+        },
+        {
+          id: Math.floor(Math.random() * 10000),
+          href: '/',
+          link: 'operations',
+        },
+        { id: Math.floor(Math.random() * 10000), href: '/', link: 'faqs' },
       ],
     },
     {
-      id: 2,
-      href: 'impact',
+      id: Math.floor(Math.random() * 10000),
+      href: '/impact',
       link: 'impact',
       sublist: [
-        { id: 1, href: '/', link: 'community' },
-        { id: 2, href: '/', link: 'partners' },
-        { id: 3, href: '/', link: 'customers' },
-        { id: 4, href: '/', link: 'animals' },
-        { id: 4, href: '/', link: 'media' },
-        { id: 4, href: '/', link: 'recognition' },
+        { id: Math.floor(Math.random() * 10000), href: '/', link: 'community' },
+        { id: Math.floor(Math.random() * 10000), href: '/', link: 'partners' },
+        { id: Math.floor(Math.random() * 10000), href: '/', link: 'customers' },
+        { id: Math.floor(Math.random() * 10000), href: '/', link: 'animals' },
+        { id: Math.floor(Math.random() * 10000), href: '/', link: 'media' },
+        {
+          id: Math.floor(Math.random() * 10000),
+          href: '/',
+          link: 'recognition',
+        },
       ],
     },
     {
-      id: 3,
-      href: 'animal-care',
+      id: Math.floor(Math.random() * 10000),
+      href: '/animal-care',
       link: 'animal care',
-      sublist: [{ id: 1, href: '/', link: 'services' }],
+      sublist: [
+        { id: Math.floor(Math.random() * 10000), href: '/', link: 'services' },
+      ],
     },
     {
-      id: 4,
-      href: 'get-involved',
+      id: Math.floor(Math.random() * 10000),
+      href: '/get-involved',
       link: 'get involved',
       sublist: [
-        { id: 1, href: '/', link: 'time' },
-        { id: 2, href: '/', link: 'action' },
-        { id: 3, href: '/', link: 'money' },
+        { id: Math.floor(Math.random() * 10000), href: '/', link: 'time' },
+        { id: Math.floor(Math.random() * 10000), href: '/', link: 'action' },
+        { id: Math.floor(Math.random() * 10000), href: '/', link: 'money' },
       ],
     },
   ];
   const companyinfo = [
     {
-      id: 1,
+      id: Math.floor(Math.random() * 10000),
       icon: (
         <MdLocationOn
           color="var(--accent-color)"
