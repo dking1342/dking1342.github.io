@@ -1,20 +1,16 @@
 import React, { ReactElement } from 'react';
 import styles from '@/styles/Hero.module.css';
+import Image from 'next/image';
 
 type Props = {
   image: string;
-  children: ReactElement;
 };
 
-const Hero = ({ image, children }: Props) => {
+const Hero = ({ image }: Props) => {
   return (
-    <section className={styles.container}>
-      <div
-        className={styles.heroImage}
-        style={{ backgroundImage: `url(${image})` }}
-      ></div>
-      {children}
-    </section>
+    <div className={styles.heroImageContainer}>
+      <Image src={image} alt="hero image" className={styles.heroImage} fill />
+    </div>
   );
 };
 

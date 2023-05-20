@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '@/styles/ImageSection.module.css';
+import Image from 'next/image';
 
 type Props = {
   url: string;
@@ -7,12 +8,9 @@ type Props = {
 
 const ImageSection = ({ url }: Props) => {
   return (
-    <section className={styles.container}>
-      <div
-        className={styles.imageContainer}
-        style={{ backgroundImage: `url(${url})` }}
-      ></div>
-    </section>
+    <div className={styles.imageContainer}>
+      <Image src={url} alt="page image" fill />
+    </div>
   );
 };
 

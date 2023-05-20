@@ -1,8 +1,8 @@
 .container{
-  display: flex;
-  width: 100%;
+  width: 90%;
+  max-width: 1000px;
   height: fit-content;
-  padding: 3rem 5rem;
+  display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 2rem;  

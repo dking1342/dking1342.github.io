@@ -1,50 +1,41 @@
 import Head from 'next/head';
 import React from 'react';
 import styles from '@/styles/Overview.module.css';
-import Hero from '@/components/Hero';
+import globalStyles from '@/styles/Global.module.css';
 import Image from 'next/image';
 import MissionTexts from '@/components/MissionTexts';
 import ClipDoubleSide from '@/components/ClipDoubleSide';
 import InfoCard from '@/components/InfoCard';
+import { CoreValueType, InfoCardType } from '@/types/cards';
+import HeroAbout from '@/components/HeroAbout';
 
 type Props = {};
-type InfoCard = {
-  id: number;
-  theme: 'primary' | 'secondary';
-  title: string;
-  body: string;
-};
-type InfoCards = InfoCard[];
-type CoreValue = {
-  id: number;
-  src: string;
-  title: string;
-  body: string;
-};
-type CoreValues = CoreValue[];
 
 const overview = (props: Props) => {
-  const infoCardGroupThree: InfoCards = [
+  const infoCardGroupThree: InfoCardType[] = [
     {
-      id: 1,
+      id: Math.floor(Math.random() * 10000),
       theme: 'secondary',
       title: 'MISSION',
       body: 'REDUCE THE STRAY CAT POPULATION TO INCREASE THE LOVE THEY CAN RECEIVE',
+      classStyle: 'infoCard1',
     },
     {
-      id: 2,
+      id: Math.floor(Math.random() * 10000),
       theme: 'secondary',
       title: 'VISION',
       body: 'WE WANT TO PROVIDE A WIDE RANGE OF SERVICES THAT CATER TO STRAY ANIMALS IN INDIA WHICH HOLISTICALLY TREAT EACH ANIMAL PATIENT',
+      classStyle: 'infoCard2',
     },
     {
-      id: 3,
+      id: Math.floor(Math.random() * 10000),
       theme: 'secondary',
       title: 'GOALS',
       body: 'OUR PRIMARY GOAL BETTER WORLD FOR IS TO CREATE A THE HELPLESS ENCOURAGE MORE ANIMALS AND PEOPLE TO ADOPT',
+      classStyle: 'infoCard3',
     },
   ];
-  const coreValues: CoreValues = [
+  const coreValues: CoreValueType[] = [
     {
       id: Math.floor(Math.random() * 10000),
       src: '/mission.png',
@@ -75,45 +66,30 @@ const overview = (props: Props) => {
           content="mission compassion company overview page"
         />
       </Head>
-      <main className={styles.overviewPage}>
-        <section className={styles.heroSection}>
-          <Hero image="/hero-about.png">
-            <div className={styles.heroHeaderContainer}>
-              <h1>about</h1>
-              <h2>mission</h2>
-              <h3>vision</h3>
-              <h4>values</h4>
-              <h5>goals</h5>
-              <div className={styles.heroImageContainer}>
-                <Image
-                  src="/heart-logo-transparent.png"
-                  alt="mission compassion logo"
-                  height={100}
-                  width={100}
-                  style={{ height: '100%', width: '100%' }}
-                />{' '}
-              </div>
-            </div>
-          </Hero>
-        </section>
-        <section className={styles.missionSection}>
+      <main className={globalStyles.pageStyles}>
+        {/* hero section */}
+        <HeroAbout />
+        {/* mission section */}
+        <section className={globalStyles.missionSection}>
           <MissionTexts
             color="primary"
             targets={[2, 3, 4, 9, 21, 22, 26, 33]}
             text="The Mission Compassion Foundation was founded by the visionaries who felt the need to build free of cost facilities for stray cats and to show gratitude towards social causes by helping the deprived creatures of society"
           />
         </section>
-        <section className={styles.governanceSection}>
+        {/* governance section */}
+        <section className={globalStyles.doubleClipSection}>
           <ClipDoubleSide theme="primary">
-            <div className={styles.doubleSideContainer}>
+            <div className={globalStyles.doubleClipContainer}>
               {infoCardGroupThree.map(({ id, theme, title, body }) => (
-                <div className={styles.doubleSideCardContainer} key={id}>
+                <div className={globalStyles.doubleClipCardContainer} key={id}>
                   <InfoCard theme={theme} title={title} body={body} />
                 </div>
               ))}
             </div>
           </ClipDoubleSide>
         </section>
+        {/* core values section */}
         <section className={styles.coreValuesSection}>
           <h2>core values</h2>
           <div className={styles.coreValuesContainer}>
@@ -130,13 +106,15 @@ const overview = (props: Props) => {
             ))}
           </div>
         </section>
-        <section className={styles.missionSection}>
+        {/* mission section */}
+        <section className={globalStyles.missionSection}>
           <MissionTexts
             color="primary"
             targets={[3, 6, 19, 25]}
             text="We are shaped by our culture. We are true to our mission, values, goals and core values. We believe it is what sets us apart"
           />
         </section>
+        {/* logo image section */}
         <section className={styles.logoImageSection}>
           <div className={styles.logoImageContainer}>
             <Image

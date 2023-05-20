@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '@/styles/Home.module.css';
+import globalStyles from '@/styles/Global.module.css';
 import MissionTexts from '@/components/MissionTexts';
 import HeroDonate from '@/components/HeroDonate';
 import HeroMain from '@/components/HeroMain';
@@ -13,31 +14,18 @@ import ClipV from '@/components/ClipV';
 import Link from 'next/link';
 import ClipVInner from '@/components/ClipVInner';
 import ClipDoubleSide from '@/components/ClipDoubleSide';
+import DonateSection from '@/components/DonateSection';
+import { InfoCardType } from '@/types/cards';
+import { QuoteType } from '@/types/quotes';
 
 type Props = {
   mobileToggle: boolean;
 };
-type InfoCard = {
-  id: number;
-  theme: 'primary' | 'secondary';
-  title: string;
-  body: string;
-};
-type InfoCards = InfoCard[];
 
-type Quote = {
-  id: number;
-  order: 'ltr' | 'rtl';
-  headshot: string;
-  quote: string;
-  author: string;
-};
-type QuoteArray = Quote[];
-
-export default function Home({ mobileToggle }: Props) {
-  const quotesArray: QuoteArray = [
+export default function Home(props: Props) {
+  const quotesArray: QuoteType[] = [
     {
-      id: 1,
+      id: Math.floor(Math.random() * 10000),
       order: 'ltr',
       headshot: '/headshot-1.png',
       quote:
@@ -46,7 +34,7 @@ export default function Home({ mobileToggle }: Props) {
         'Michelle McSwain live in Mumbai with their cat, Julep, and their new son. Michelle is a professional photographer who has voluntarily lent her talents to Mission Compassion. She is a generous Mission Compassion donor, working alongside us to achieve a shared mission.',
     },
     {
-      id: 2,
+      id: Math.floor(Math.random() * 10000),
       order: 'rtl',
       headshot: '/headshot-2.png',
       quote:
@@ -55,52 +43,59 @@ export default function Home({ mobileToggle }: Props) {
         'Michelle McSwain live in Mumbai with their cat, Julep, and their new son. Michelle is a professional photographer who has voluntarily lent her talents to Mission Compassion. She is a generous Mission Compassion donor, working alongside us to achieve a shared mission.',
     },
   ];
-  const infoCardGroupOne: InfoCards = [
+  const infoCardGroupOne: InfoCardType[] = [
     {
-      id: 1,
+      id: Math.floor(Math.random() * 10000),
       theme: 'primary',
       title: '6000',
       body: 'STERILIZATIONS OF STREET CATS THE PAST 2 YEARS',
+      classStyle: 'infoCard1',
     },
     {
-      id: 2,
+      id: Math.floor(Math.random() * 10000),
       theme: 'primary',
       title: '350',
       body: 'LEGS AMPUTATED OF CATS THAT HAD EITHER BROKEN OR SEVERELY DAMAGED LIMBS',
+      classStyle: 'infoCard2',
     },
   ];
-  const infoCardGroupTwo: InfoCards = [
+  const infoCardGroupTwo: InfoCardType[] = [
     {
-      id: 1,
+      id: Math.floor(Math.random() * 10000),
       theme: 'primary',
       title: '200',
       body: 'EYES THAT HAVE BEEN REMOVED WHICH HAS LED TO THE IMPROVED HEALTH OF CATS',
+      classStyle: 'infoCard1',
     },
     {
-      id: 2,
+      id: Math.floor(Math.random() * 10000),
       theme: 'primary',
       title: '150',
       body: 'CATS THAT WERE DEWORMED AND CAN NOW HAVE PEACE OF MIND IN OUR CITY',
+      classStyle: 'infoCard2',
     },
   ];
-  const infoCardGroupThree: InfoCards = [
+  const infoCardGroupThree: InfoCardType[] = [
     {
-      id: 1,
+      id: Math.floor(Math.random() * 10000),
       theme: 'primary',
       title: '100',
       body: 'CATS GIVEN AN ANTI- RABIES VACCINATION WHICH LEADS TO A HEALTHIER POPULATION',
+      classStyle: 'infoCard1',
     },
     {
-      id: 2,
+      id: Math.floor(Math.random() * 10000),
       theme: 'primary',
       title: '450',
       body: 'ANIMALS GIVEN CRITICAL CARE AT OUR MUMBAI CLINCS AND HELPED SAVE THEIR LIVES',
+      classStyle: 'infoCard2',
     },
     {
-      id: 3,
+      id: Math.floor(Math.random() * 10000),
       theme: 'primary',
       title: '1000+',
       body: 'DONORS THAT HAVE PLEDGED THEIR SUPPORT TO OUR CAUSE',
+      classStyle: 'infoCard3',
     },
   ];
 
@@ -111,8 +106,9 @@ export default function Home({ mobileToggle }: Props) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="mission compassion" />
       </Head>
-      <main className={styles.homePage}>
-        <section className={styles.heroSection}>
+      <main className={globalStyles.pageStyles}>
+        {/* hero section */}
+        <section className={globalStyles.heroSection}>
           <HeroMain image="main-hero-1.png">
             <div className={styles.heroContent}>
               <div className={styles.heroTitleContainer}>
@@ -133,22 +129,26 @@ export default function Home({ mobileToggle }: Props) {
             </div>
           </HeroMain>
         </section>
-        <section className={styles.missionSection}>
+        {/* mission section */}
+        <section className={globalStyles.missionSection}>
           <MissionTexts
             text="Reduce the stray cat population to increase the love they can receive"
             targets={[1, 9]}
             color="primary"
           />
         </section>
-        <section className={styles.infoSectionSlanted}>
+        {/* sub hero section */}
+        <section className={globalStyles.clipSection}>
           <ClipSlanted bg={'primary'}>
-            <div className={styles.slantedContainer}>
-              {infoCardGroupOne.map(({ id, theme, title, body }) => (
-                <div className={styles.slantedCardContainer} key={id}>
-                  <InfoCard theme={theme} title={title} body={body} />
-                </div>
-              ))}
-              <div className={styles.slantedCardContainer}>
+            <div className={globalStyles.slantedContainer}>
+              {infoCardGroupOne.map(
+                ({ id, theme, title, body, classStyle }) => (
+                  <div className={globalStyles[classStyle]} key={id}>
+                    <InfoCard theme={theme} title={title} body={body} />
+                  </div>
+                )
+              )}
+              <div className={globalStyles.infoCard3}>
                 <MissionText
                   text={
                     'We aim to improve the conditions for street animals in our city'
@@ -160,9 +160,11 @@ export default function Home({ mobileToggle }: Props) {
             </div>
           </ClipSlanted>
         </section>
-        <section className={styles.imageSection}>
-          <ImageSection url={'stray-cat-image-1.png'} />
+        {/* logo image section */}
+        <section>
+          <ImageSection url={'/main-logo.png'} />
         </section>
+        {/* quotes section */}
         <section className={styles.quotesSection}>
           <h3>
             Meet our{' '}
@@ -170,8 +172,9 @@ export default function Home({ mobileToggle }: Props) {
               <Image
                 src={'/heart-logo-transparent.png'}
                 alt="logo"
-                width={40}
-                height={40}
+                className={styles.quotesLogoImage}
+                width={50}
+                height={50}
               />
             </span>{' '}
             people
@@ -186,11 +189,11 @@ export default function Home({ mobileToggle }: Props) {
             />
           ))}
         </section>
-        <section className={styles.impactSection}>
-          <h3>our impact</h3>
+        {/* impact section */}
+        <section>
           <ClipV>
             <ClipVInner
-              src="/stray-cat-image-2.png"
+              src="/stray-cat-image-1.png"
               alt="impact image of cat"
               title="TAKING ACTION IN OUR COMMUNITY"
               body="We actively participate in events and awareness that brings
@@ -202,22 +205,26 @@ export default function Home({ mobileToggle }: Props) {
             />
           </ClipV>
         </section>
-        <section className={styles.missionSection}>
+        {/* mission section */}
+        <section className={globalStyles.missionSection}>
           <MissionTexts
             text="We strive to provide give affordable treatment to injured animals in our city"
             targets={[2, 9, 17, 21]}
             color="primary"
           />
         </section>
-        <section className={styles.infoSectionSlanted}>
+        {/* about section */}
+        <section className={globalStyles.clipSection}>
           <ClipSlanted bg="primary">
-            <div className={styles.slantedContainer}>
-              {infoCardGroupTwo.map(({ id, theme, title, body }) => (
-                <div className={styles.slantedCardContainer} key={id}>
-                  <InfoCard theme={theme} title={title} body={body} />
-                </div>
-              ))}
-              <div className={styles.slantedCardContainer}>
+            <div className={globalStyles.slantedContainer}>
+              {infoCardGroupTwo.map(
+                ({ id, theme, title, body, classStyle }) => (
+                  <div className={globalStyles[classStyle]} key={id}>
+                    <InfoCard theme={theme} title={title} body={body} />
+                  </div>
+                )
+              )}
+              <div className={globalStyles.infoCard3}>
                 <Link href={'about'} className={styles.getToKnowLink}>
                   Get to know us
                 </Link>
@@ -225,20 +232,18 @@ export default function Home({ mobileToggle }: Props) {
             </div>
           </ClipSlanted>
         </section>
-        <section className={styles.donateSection}>
-          <div className={styles.donateImageContainer}></div>
-          <div className={styles.heroDonateContainer}>
-            <HeroDonate />
-          </div>
-        </section>
-        <section className={styles.missionSection}>
+        {/* donate section */}
+        <DonateSection />
+        {/* mission section */}
+        <section className={globalStyles.missionSection}>
           <MissionTexts
             text="We encourage more people to adopt local breeds"
             targets={[2, 6]}
             color="primary"
           />
         </section>
-        <section className={styles.servicesSection}>
+        {/* services section */}
+        <section>
           <ClipV>
             <ClipVInner
               src="/cat-services-2.png"
@@ -251,25 +256,28 @@ export default function Home({ mobileToggle }: Props) {
             />
           </ClipV>
         </section>
-        <section className={styles.missionSection}>
+        {/* mission section */}
+        <section className={globalStyles.missionSection}>
           <MissionTexts
             text="We provide good quality treatment that leads to fewer street animals"
             targets={[4, 9, 14]}
             color="primary"
           />
         </section>
-        <section className={styles.statsSection}>
+        {/* stats section */}
+        <section className={globalStyles.doubleClipSection}>
           <ClipDoubleSide theme="primary">
-            <div className={styles.doubleSideContainer}>
+            <div className={globalStyles.doubleClipContainer}>
               {infoCardGroupThree.map(({ id, theme, title, body }) => (
-                <div className={styles.doubleSideCardContainer} key={id}>
+                <div className={globalStyles.doubleClipCardContainer} key={id}>
                   <InfoCard theme={theme} title={title} body={body} />
                 </div>
               ))}
             </div>
           </ClipDoubleSide>
         </section>
-        <section className={styles.getinvolvedSection}>
+        {/* get involved section */}
+        <section>
           <ClipV>
             <ClipVInner
               src="/volunteer-2.png"

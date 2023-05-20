@@ -30,7 +30,7 @@ const ClipVInner = ({
           alt={alt}
           sizes="100%"
           fill
-          style={{ objectFit: 'cover', objectPosition: 'bottom' }}
+          style={{ objectFit: 'fill' }}
         />
       </div>
       <div className={styles.impactContentContainer}>

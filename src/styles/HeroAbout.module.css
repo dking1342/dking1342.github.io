@@ -1,0 +1,59 @@
+
+.heroHeaderContainer{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+}
+.heroCallContainer{
+  position: relative;
+  text-transform: uppercase;
+  height: 100%;
+  width: 100%;
+}
+.heroCallContainer h1{
+  position: absolute;
+  left: -30cqw;
+  top: 9cqw;
+  transform: rotate(-90deg);
+  font-size: 8cqw;
+  color: #15fefe;
+  transform-origin: 100% 0;
+}
+.heroCallContainer h2{
+  position: absolute;
+  font-size: 8cqw;
+  color: var(--accent-color);
+  top: 0cqw;
+  left: 2cqw;
+}
+.heroCallContainer h3{
+  position: absolute;
+  left: -21cqw;
+  top: 10cqw;
+  transform: rotate(-90deg);
+  font-size: 8cqw;
+  color: var(--accent-color);
+  transform-origin: 100% 0;
+}
+.heroCallContainer h4{
+  position: absolute;
+  top: 10cqw;
+  left: 17cqw;
+  font-size: 5cqw;
+  color: var(--secondary-color);
+}
+.heroCallContainer h5{
+  position: absolute;
+  top: 16cqw;
+  left: 17cqw;
+  font-size: 6cqw;
+  color: #fdfd1c;
+}
+.heroImageContainer{
+  position: absolute;
+  height: 19cqw;
+  width: 21cqw;
+  left: 18cqw;
+  top: 23cqw;
+}

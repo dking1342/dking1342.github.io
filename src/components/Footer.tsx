@@ -47,7 +47,7 @@ const Footer = (props: Props) => {
         },
         {
           id: Math.floor(Math.random() * 10000),
-          href: '/',
+          href: '/about/operations',
           link: 'operations',
         },
         { id: Math.floor(Math.random() * 10000), href: '/', link: 'faqs' },

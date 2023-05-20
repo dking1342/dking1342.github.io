@@ -1,7 +1,6 @@
 import Navbar from '@/components/Navbar';
 import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
-import styles from '../styles/Navbar.module.css';
 
 import { Montserrat } from 'next/font/google';
 import { useState } from 'react';
@@ -44,6 +43,8 @@ export default function App({ Component, pageProps }: AppProps) {
     }, 700);
   };
   const onMobileClick = () => {
+    document.querySelector('html')!.style.overflowY = '';
+
     setMobileToggle(false);
     setTimeout(() => {
       setNavbarToggle(false);

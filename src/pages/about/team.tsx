@@ -2,6 +2,7 @@ import Hero from '@/components/Hero';
 import Head from 'next/head';
 import React from 'react';
 import styles from '@/styles/Team.module.css';
+import globalStyles from '@/styles/Global.module.css';
 import Image from 'next/image';
 import MissionTexts from '@/components/MissionTexts';
 import ClipSlanted from '@/components/ClipSlanted';
@@ -11,25 +12,13 @@ import ClipDoubleSide from '@/components/ClipDoubleSide';
 import InfoCard from '@/components/InfoCard';
 import ClipV from '@/components/ClipV';
 import ClipVInner from '@/components/ClipVInner';
+import { PartnerType, TeamMemberType } from '@/types/cards';
+import HeroAbout from '@/components/HeroAbout';
 
 type Props = {};
-type TeamMember = {
-  id: number;
-  src: string;
-  name: string;
-  role: string;
-};
-type TeamMembers = TeamMember[];
-type Partner = {
-  id: number;
-  theme: 'primary' | 'secondary';
-  title: string;
-  body: string;
-};
-type Partners = Partner[];
 
 const team = (props: Props) => {
-  const team: TeamMembers = [
+  const team: TeamMemberType[] = [
     {
       id: Math.floor(Math.random() * 10000),
       src: '/headshot-1.png',
@@ -55,7 +44,7 @@ const team = (props: Props) => {
       role: 'Manager',
     },
   ];
-  const partnersCards: Partners = [
+  const partnersCards: PartnerType[] = [
     {
       id: Math.floor(Math.random() * 10000),
       theme: 'secondary',
@@ -77,34 +66,18 @@ const team = (props: Props) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="mission compassion team" />
       </Head>
-      <main className={styles.teamPage}>
-        <section className={styles.heroSection}>
-          <Hero image="/hero-about.png">
-            <div className={styles.heroHeaderContainer}>
-              <h1>about</h1>
-              <h2>mission</h2>
-              <h3>vision</h3>
-              <h4>values</h4>
-              <h5>goals</h5>
-              <div className={styles.heroImageContainer}>
-                <Image
-                  src="/heart-logo-transparent.png"
-                  alt="mission compassion logo"
-                  height={100}
-                  width={100}
-                  style={{ height: '100%', width: '100%' }}
-                />
-              </div>
-            </div>
-          </Hero>
-        </section>
-        <section className={styles.missionSection}>
+      <main className={globalStyles.pageStyles}>
+        {/* hero section */}
+        <HeroAbout />
+        {/* mission section */}
+        <section className={globalStyles.missionSection}>
           <MissionTexts
             color="primary"
             targets={[1, 6, 13, 17, 25]}
             text="Love is meant to be unconditional and the primary focus of our team is to serve humanity to make the world a little more happy and compassionate"
           />
         </section>
+        {/* leadership styles */}
         <section className={styles.leadershipSection}>
           <ClipSlanted bg="primary">
             <div className={styles.leadershipContainer}>
@@ -135,6 +108,7 @@ const team = (props: Props) => {
             </div>
           </ClipSlanted>
         </section>
+        {/* quotes section */}
         <section className={styles.teamQuotesSection}>
           <h1>what is our team saying?</h1>
           <div className={styles.teamQuotesContainer}>
@@ -152,28 +126,31 @@ const team = (props: Props) => {
             />
           </div>
           <div className={styles.quotesLinkContainer}>
-            <Link href={'/'}>Meet the rest of our team</Link>
+            <Link href={'/about/team/staff'}>Meet the rest of our team</Link>
           </div>
         </section>
-        <section className={styles.missionSection}>
+        {/* mission section */}
+        <section className={globalStyles.missionSection}>
           <MissionTexts
             color="primary"
             targets={[3, 12, 13, 21, 27]}
             text="We are interested to tie up with companies falling under the CSR bracket to find our NGO to achieve our mission as social help towards the community"
           />
         </section>
-        <section className={styles.statsSection}>
+        {/* stats section */}
+        <section className={globalStyles.doubleClipSection}>
           <ClipDoubleSide theme="accent">
-            <div className={styles.infoCardsContainer}>
+            <div className={globalStyles.doubleClipContainer}>
               {partnersCards.map(({ id, theme, title, body }) => (
-                <div className={styles.infoCardContainer} key={id}>
+                <div className={globalStyles.doubleClipCardContainer} key={id}>
                   <InfoCard theme={`${theme}`} title={title} body={body} />
                 </div>
               ))}
             </div>
           </ClipDoubleSide>
         </section>
-        <section className={styles.partnersSection}>
+        {/* partners section */}
+        <section>
           <ClipV>
             <ClipVInner
               src="/partners-1.png"

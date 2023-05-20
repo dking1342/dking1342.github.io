@@ -1,0 +1,32 @@
+/* donation section styles */
+.donateSection{
+  position: relative;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10vw 0;
+  margin-top: -8rem;
+}
+.donateImageContainer{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(/bg.png);
+  background-color: var(--accent-color);
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  z-index: 0;
+}
+.donateImageContainer:after{
+  content:"";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.heroDonateContainer{
+  z-index: 2;
+  box-shadow: 10px 10px 10vh black;
+}

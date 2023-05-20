@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '@/styles/InfoCard.module.css';
+import globalStyles from '@/styles/Global.module.css';
 
 type Props = {
   theme: 'primary' | 'secondary';

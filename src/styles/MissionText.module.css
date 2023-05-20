@@ -1,15 +1,11 @@
 .text{
-  font-size: 3rem;
+  font-size: clamp(30px,10vw,60px);
   font-weight: 700;
   text-align: center;
-  margin:0 2rem;
+  /* max-width: 1000px; */
+  /* min-width: 325px; */
 }
 .highlight{
   color: var(--accent-color);
 }
 
-@media (max-width:800px) {
-  .text{
-    font-size: 2.75rem;
-  }
-}
