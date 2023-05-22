@@ -4,9 +4,11 @@ import globalStyles from '@/styles/Global.module.css';
 import Hero from './Hero';
 import Image from 'next/image';
 
-type Props = {};
+type Props = {
+  page: string;
+};
 
-const HeroAbout = (props: Props) => {
+const HeroAbout = ({ page }: Props) => {
   return (
     <section className={globalStyles.heroSection}>
       <Hero image="/hero-about.png" />
@@ -27,6 +29,9 @@ const HeroAbout = (props: Props) => {
             />{' '}
           </div>
         </div>
+      </div>
+      <div className={styles.currentPage}>
+        <h1>{page}</h1>
       </div>
     </section>
   );

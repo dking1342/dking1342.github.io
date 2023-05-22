@@ -1,4 +1,3 @@
-import Hero from '@/components/Hero';
 import Head from 'next/head';
 import React from 'react';
 import styles from '@/styles/Team.module.css';
@@ -68,7 +67,7 @@ const team = (props: Props) => {
       </Head>
       <main className={globalStyles.pageStyles}>
         {/* hero section */}
-        <HeroAbout />
+        <HeroAbout page="leadership" />
         {/* mission section */}
         <section className={globalStyles.missionSection}>
           <MissionTexts

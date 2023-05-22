@@ -378,17 +378,17 @@ const operations = (props: Props) => {
       </Head>
       <main className={globalStyles.pageStyles}>
         {/* hero section */}
-        <HeroAbout />
+        <HeroAbout page="operations" />
         {/* mission section */}
         <section className={globalStyles.missionSection}>
           <MissionTexts
             color="primary"
             targets={[2, 7, 13, 16]}
-            text="WE PRIDE OURSELVES FOR BEING AN NGO THAT WANTS TO EARN YOUR TRUST THROUGH OUR TRANSPARENCY"
+            text="We pride ourselves for being an NGO that wants to earn your trust through our transparency"
           />
         </section>
         {/* company info section */}
-        <section className={styles.companyInfoContainer}>
+        <section className={globalStyles.clipSection}>
           <ClipSlanted bg="primary">
             <>
               <div className={styles.rowFirst}>

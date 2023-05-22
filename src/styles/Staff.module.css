@@ -1,94 +1,31 @@
-.staffPage{
-  display: flex;
-  flex-direction: column;
-  gap:2rem;
-}
-.heroSection{
-  height: 100vh;
-}
-.heroHeaderContainer{
-  height: 350px;
-  width: 350px;
-  position: relative;
-  text-transform: uppercase;
-  left: 25%;
-  top: 25%;
-  transform: translate(-25%,-25%);
-}
-.heroHeaderContainer h1{
-  position: absolute;
-  left: -109px;
-  bottom: 105px;
-  transform: rotate(270deg);
-  font-size: 4.5rem;
-  color: #15fefe;
-}
-.heroHeaderContainer h2{
-  position: absolute;
-  font-size: 3.5rem;
-  letter-spacing: 7px;
-  color: var(--accent-color);
-}
-.heroHeaderContainer h3{
-  position: absolute;
-  left: -24px;
-  bottom: 95px;
-  transform: rotate(270deg);
-  font-size: 3rem;
-  letter-spacing: 8px;
-  color: var(--accent-color);
-}
-.heroHeaderContainer h4{
-  position: absolute;
-  top: 51px;
-  left: 60px;
-  font-size: 3.5rem;
-  color: var(--secondary-color);  
-}
-.heroHeaderContainer h5{
-  position: absolute;
-  top: 115px;
-  left: 116px;
-  font-size: 2.5rem;
-  letter-spacing: 8px;
-  color: #fdfd1c;  
-}
-.heroImageContainer{
-  position: absolute;
-  height: 190px;
-  width: 190px;
-  left: 118px;
-  top: 155px;
-}
-
 /* staff section styles */
 .staffSection{
   display: flex;
   flex-direction: column;
   gap: 10rem;
   align-items: center;
-  margin-top: 10rem;
-  padding: 0 3rem;
   padding-bottom: 3rem;
+  max-width: 1500px;
+  width: 95%;
+  margin: 0 auto;
 }
 .staffSection h1{
   text-transform: uppercase;
-  font-size: clamp(30px,8vw,70px);
+  font-size: clamp(50px,15vw,80px);
   width: 100%;
   text-align: center;
 }
 .staffCardsContainer{
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
   align-items: center;
   justify-items: center;
   row-gap: 3rem;
+  column-gap: 2rem;
 }
 .staffCardContainer{
-  width: 325px;
-  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(52,52,52,1) 25%, rgba(78,78,78,1) 50%, rgba(99,99,99,1) 75%, rgba(255,98,98,1) 100%);
-  color: var(--secondary-color);
+  width: 300px;
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -109,7 +46,8 @@
   background-position: inherit;
   background-repeat: no-repeat;
   filter:invert(1);
-  opacity: 0.2;
+  opacity: 0.5;
+  z-index: -1;
 }
 .staffCardImageContainer{
   position: relative;

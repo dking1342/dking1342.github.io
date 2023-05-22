@@ -4,56 +4,76 @@
   height: 100%;
   position: absolute;
   inset: 0;
+  max-height: 50vh;
 }
 .heroCallContainer{
   position: relative;
   text-transform: uppercase;
   height: 100%;
   width: 100%;
+  max-height: 50vh;
 }
-.heroCallContainer h1{
+.heroCallContainer h1,
+.heroCallContainer h2,
+.heroCallContainer h3,
+.heroCallContainer h4,
+.heroCallContainer h5{
   position: absolute;
-  left: -30cqw;
-  top: 9cqw;
+  font-weight: 200;
+
+}
+
+
+.heroCallContainer h1{
+  left: -9cqw;
+  top: 4cqw;
   transform: rotate(-90deg);
-  font-size: 8cqw;
+  font-size: 3cqw;
   color: #15fefe;
   transform-origin: 100% 0;
 }
 .heroCallContainer h2{
-  position: absolute;
-  font-size: 8cqw;
+  font-size: 3.25cqw;
   color: var(--accent-color);
   top: 0cqw;
   left: 2cqw;
 }
 .heroCallContainer h3{
-  position: absolute;
-  left: -21cqw;
-  top: 10cqw;
+  left: -5.5cqw;
+  top: 4cqw;
   transform: rotate(-90deg);
-  font-size: 8cqw;
+  font-size: 3cqw;
   color: var(--accent-color);
   transform-origin: 100% 0;
 }
 .heroCallContainer h4{
-  position: absolute;
-  top: 10cqw;
-  left: 17cqw;
-  font-size: 5cqw;
+  top: 4cqw;
+  left: 9cqw;
+  font-size: 1.75cqw;
   color: var(--secondary-color);
 }
 .heroCallContainer h5{
-  position: absolute;
-  top: 16cqw;
-  left: 17cqw;
-  font-size: 6cqw;
+  top: 6cqw;
+  left: 9cqw;
+  font-size: 2cqw;
   color: #fdfd1c;
 }
 .heroImageContainer{
   position: absolute;
-  height: 19cqw;
-  width: 21cqw;
-  left: 18cqw;
-  top: 23cqw;
+  height: 6cqw;
+  width: 7cqw;
+  left: 9cqw;
+  top: 9cqw;
+}
+
+.currentPage{
+  position: absolute;
+  top: 17cqw;
+  left: 3cqw;
+  color: var(--secondary-color);
+  font-size: 3cqw;
+  text-transform: capitalize;
+}
+.currentPage h1{
+  font-weight: 200;
 }

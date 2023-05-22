@@ -1,13 +1,12 @@
 /* history section styles */
 .historySection{
-  height: 90vh;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  padding: 0 10vw;
   position: relative;
-  gap:2rem;
+  gap:5rem;
 }
 .historySection::after{
   content:"";
@@ -28,6 +27,7 @@
   align-items: center;
   gap: 2rem;
   max-width: 1000px;  
+  width: 90%;
 }
 .historyMainContainer h1{
   font-size: clamp(45px,7vw,80px);
@@ -60,49 +60,6 @@
 }
 .historyMottoContainer h4{
   font-size: clamp(60px,10vw,100px);
-}
-
-/* growth section styles */
-.growthSection{
-  height: clamp(750px,5vw,2000px);
-}
-.growthContainer{
-  position: relative;
-  height: 100%;
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 65% 100%, 0 75%);
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 65% 100%, 0 75%);
-  padding: 2rem;
-  gap: 2rem;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-.growthContainer::after{
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url(/bg.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: -1;
-}
-.growthContainer h1{
-  font-size: clamp(35px,8vw,80px);
-  color: var(--accent-color);
-  text-align: center;
-  max-width: 1000px;
-  width: 100%;
-}
-.growthContainer p{
-  font-size: clamp(20px,3.5vw,45px);
-  text-align: center;
-  max-width: 1000px;
-  width: 90%;
 }
 
 /* stats section styles */

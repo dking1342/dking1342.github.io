@@ -41,7 +41,7 @@ const About = (props: Props) => {
       </Head>
       <main className={globalStyles.pageStyles}>
         {/* hero section */}
-        <HeroAbout />
+        <HeroAbout page="about" />
         {/* history section */}
         <section className={styles.historySection}>
           <div className={styles.historyMainContainer}>
@@ -63,11 +63,10 @@ const About = (props: Props) => {
               <h4>felines</h4>
             </div>
           </div>
-        </section>
-        {/* growth section */}
-        <section className={styles.growthSection}>
-          <div className={styles.growthContainer}>
-            <h1>GROWTH TO MEET DEMAND</h1>
+          <div className={styles.historyMainContainer}>
+            <h1>
+              <span className={styles.highlight}>2 years</span> of growth
+            </h1>
             <p>
               Our growth has been an unexpected, but reassuring, experience. We
               are immensely grateful and fortunate to be a steward for the
@@ -150,7 +149,12 @@ const About = (props: Props) => {
         <section className={styles.faqSection}>
           <div className={styles.ctaContainer}>
             <p>DO YOU HAVE QUESTIONS ABOUT WHAT WE DO AND HOW WE SERVE?</p>
-            <LinkBtn href="/" text="READ FAQs" size="lg" theme="primary" />
+            <LinkBtn
+              href="/about/faqs"
+              text="READ FAQs"
+              size="lg"
+              theme="primary"
+            />
           </div>
         </section>
         {/* mission section */}

@@ -68,7 +68,7 @@ const overview = (props: Props) => {
       </Head>
       <main className={globalStyles.pageStyles}>
         {/* hero section */}
-        <HeroAbout />
+        <HeroAbout page="overview" />
         {/* mission section */}
         <section className={globalStyles.missionSection}>
           <MissionTexts

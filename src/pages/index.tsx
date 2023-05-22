@@ -108,7 +108,7 @@ export default function Home(props: Props) {
       </Head>
       <main className={globalStyles.pageStyles}>
         {/* hero section */}
-        <section className={globalStyles.heroSection}>
+        <section className={styles.heroSection}>
           <HeroMain image="main-hero-1.png">
             <div className={styles.heroContent}>
               <div className={styles.heroTitleContainer}>

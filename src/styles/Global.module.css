@@ -6,8 +6,10 @@
 
 /* hero section styles */
 .heroSection{
-  height: fit-content;
+  height: 100%;
   position: relative;
+  max-height: 60vh;
+  overflow: hidden;
 }
 
 /* mission section styles */
@@ -73,6 +75,11 @@
 }
 .doubleClipCardContainer:nth-child(2){
   justify-self: flex-start;
+}
+
+/* util styles */
+.highlight{
+  color:var(--accent-color);
 }
 
 @media (max-width:450px) {

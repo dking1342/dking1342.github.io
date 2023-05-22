@@ -47,10 +47,19 @@ const Footer = (props: Props) => {
         },
         {
           id: Math.floor(Math.random() * 10000),
+          href: '/about/team/staff',
+          link: 'staff',
+        },
+        {
+          id: Math.floor(Math.random() * 10000),
           href: '/about/operations',
           link: 'operations',
         },
-        { id: Math.floor(Math.random() * 10000), href: '/', link: 'faqs' },
+        {
+          id: Math.floor(Math.random() * 10000),
+          href: '/about/faqs',
+          link: 'faqs',
+        },
       ],
     },
     {
@@ -92,12 +101,7 @@ const Footer = (props: Props) => {
   const companyinfo = [
     {
       id: Math.floor(Math.random() * 10000),
-      icon: (
-        <MdLocationOn
-          color="var(--accent-color)"
-          style={{ width: '100%', height: '100%' }}
-        />
-      ),
+      icon: <MdLocationOn color="var(--accent-color)" />,
       text: (
         <p>
           FLAT NO 5, SABA BUILDING <br></br>297, MANIPADA ROAD <br></br>{' '}
@@ -108,12 +112,7 @@ const Footer = (props: Props) => {
     },
     {
       id: 2,
-      icon: (
-        <AiFillPhone
-          color="var(--accent-color)"
-          style={{ width: '100%', height: '100%' }}
-        />
-      ),
+      icon: <AiFillPhone color="var(--accent-color)" />,
       text: (
         <p>
           +91 9892238980<br></br>+91 9987438980
@@ -122,12 +121,7 @@ const Footer = (props: Props) => {
     },
     {
       id: 3,
-      icon: (
-        <AiOutlineMail
-          color="var(--accent-color)"
-          style={{ width: '40px', height: '40px' }}
-        />
-      ),
+      icon: <AiOutlineMail color="var(--accent-color)" />,
       text: <p>MISSIONCOMPASSIONFOUNDATION@GMAIL.COM</p>,
     },
   ];
@@ -173,132 +167,110 @@ const Footer = (props: Props) => {
       href: 'https://www.youtube.com/channel/UCtpjQiongg27Ir6c_KF8orA',
     },
   ];
+
   return (
     <footer className={styles.footer}>
-      <div className={styles.footerTop}>
-        <div className={styles.footerTopLeftContainer}>
-          <div className={styles.contactContainer}>
-            <div className={styles.contactTitleContainer}>
-              <h4>Get in touch with us</h4>
-              <h5>we love hearing from you</h5>
-            </div>
-            <div className={styles.contactFormContainer}>
-              <div className={styles.textContainer}>
-                <label htmlFor="firstname">first name</label>
-                <input type="text" id="firstname" name="firstname" />
-              </div>
-              <div className={styles.textContainer}>
-                <label htmlFor="email">email</label>
-                <input type="email" id="email" name="email" />
-              </div>
-              <div className={styles.textContainer}>
-                <label htmlFor="message">message</label>
-                <textarea
-                  name="message"
-                  id="message"
-                  cols={10}
-                  rows={5}
-                ></textarea>
-              </div>
-            </div>
-            <div className={styles.contactCaptchaContainer}>
-              <input type="checkbox" />
-              <span>i am not a robot</span>
-              <Image
-                src={'/captcha.png'}
-                alt="captcha image"
-                width={40}
-                height={40}
-              />
-            </div>
-            <div className={styles.contactBtnContainer}>
-              <button className={styles.submitBtn}>submit</button>
-              <span className={styles.cornerSquare}></span>
-            </div>
-          </div>
-        </div>
-        <div className={styles.footerTopRightContainer}>
-          <div className={styles.sitemapContainer}>
-            <ul className={styles.siteMapUlContainer}>
-              {sitemap.map((site) => (
-                <li key={site.id}>
-                  <Link href={site.href} className={styles.sitemapHeaderLink}>
-                    {site.link}
-                  </Link>
-                  <ul className={styles.sitemapSubUlContainer}>
-                    {site.sublist.map((sub) => (
-                      <li key={sub.id}>
-                        <Link
-                          href={sub.href}
-                          className={styles.sitemapSubheaderLink}
-                        >
-                          {sub.link}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className={styles.companyContainer}>
-            <div className={styles.infoContainer}>
-              <div className={styles.infoListContainer}>
-                {companyinfo.map((info) => (
-                  <div key={info.id} className={styles.infoDetailsContainer}>
-                    <div className={styles.infoDetailsLogoContainer}>
-                      {info.icon}
-                    </div>
-                    <div className={styles.infoDetailsContentContainer}>
-                      <>{info.text}</>
-                    </div>
-                  </div>
+      <div className={`${styles.row}`}>
+        <ul className={`${styles.ul} ${styles.siteMapUl}`}>
+          {sitemap.map((site) => (
+            <li key={site.id} className={`${styles.li} ${styles.siteMapLi}`}>
+              <Link href={site.href} className={styles.navlink}>
+                {site.link}
+              </Link>
+              <ul className={styles.subUl}>
+                {site.sublist.map((sub) => (
+                  <li key={sub.id} className={styles.subLi}>
+                    <Link href={sub.href} className={styles.subNavlink}>
+                      {sub.link}
+                    </Link>
+                  </li>
                 ))}
+              </ul>
+            </li>
+          ))}
+        </ul>
+        <ul className={`${styles.ul} ${styles.companyUl}`}>
+          {companyinfo.map((info) => (
+            <li key={info.id} className={styles.li}>
+              <div className={styles.navlink}>{info.icon}</div>
+              <div className={styles.navlink}>
+                <>{info.text}</>
               </div>
-              <div className={styles.infoSocialContainer}>
-                <ul>
-                  {socials.map((social) => (
-                    <li key={social.id}>
-                      <Link href={social.href}>{social.name}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <svg width="0" height="0">
-                <radialGradient id="insta-brg" r="150%" cx="30%" cy="107%">
-                  <stop stopColor="#fdf497" offset="0" />
-                  <stop stopColor="#fdf497" offset="0.05" />
-                  <stop stopColor="#fd5949" offset="0.45" />
-                  <stop stopColor="#d6249f" offset="0.6" />
-                  <stop stopColor="#285AEB" offset="0.9" />
-                </radialGradient>
-              </svg>
+            </li>
+          ))}
+        </ul>
+        <ul className={`${styles.ul} ${styles.socialsUl}`}>
+          {socials.map((social) => (
+            <li key={social.id} className={styles.li}>
+              <Link href={social.href} className={styles.navlink}>
+                {social.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <svg width="0" height="0">
+          <radialGradient id="insta-brg" r="150%" cx="30%" cy="107%">
+            <stop stopColor="#fdf497" offset="0" />
+            <stop stopColor="#fdf497" offset="0.05" />
+            <stop stopColor="#fd5949" offset="0.45" />
+            <stop stopColor="#d6249f" offset="0.6" />
+            <stop stopColor="#285AEB" offset="0.9" />
+          </radialGradient>
+        </svg>
+        <ul className={`${styles.ul} ${styles.logoUl}`}>
+          <li className={styles.li}>
+            <Image src={'/main-logo.png'} alt="mission compassion logo" fill />
+          </li>
+          <li className={styles.li}>
+            “Mission compassion foundation” is founded by the visionaries who
+            felt the need to build free of cost facilities for stray cats and to
+            show gratitude towards social causes by helping the deprived
+            creatures of society
+          </li>
+        </ul>
+      </div>
+      <div className={`${styles.row}`}>
+        <div className={styles.contactContainer}>
+          <div className={styles.contactTitleContainer}>
+            <h4>Get in touch with us</h4>
+            <h5>we love hearing from you</h5>
+          </div>
+          <div className={styles.contactFormContainer}>
+            <div className={styles.textContainer}>
+              <label htmlFor="firstname">first name</label>
+              <input type="text" id="firstname" name="firstname" />
             </div>
-            <div className={styles.logoContainer}>
-              <div className={styles.logoDisplayContainer}>
-                <Image
-                  src={'/main-logo.png'}
-                  alt="mission compassion logo"
-                  style={{
-                    objectFit: 'cover',
-                    objectPosition: 'center',
-                    height: '100%',
-                    width: '100%',
-                  }}
-                  fill
-                />
-              </div>
-              <p className={styles.logoContent}>
-                “Mission compassion foundation” is founded by the visionaries
-                who felt the need to build free of cost facilities for stray
-                cats and to show gratitude towards social causes by helping the
-                deprived creatures of society
-              </p>
+            <div className={styles.textContainer}>
+              <label htmlFor="email">email</label>
+              <input type="email" id="email" name="email" />
             </div>
+            <div className={styles.textContainer}>
+              <label htmlFor="message">message</label>
+              <textarea
+                name="message"
+                id="message"
+                cols={10}
+                rows={5}
+              ></textarea>
+            </div>
+          </div>
+          <div className={styles.contactCaptchaContainer}>
+            <input type="checkbox" />
+            <span>i am not a robot</span>
+            <Image
+              src={'/captcha.png'}
+              alt="captcha image"
+              width={40}
+              height={40}
+            />
+          </div>
+          <div className={styles.contactBtnContainer}>
+            <button className={styles.submitBtn}>submit</button>
+            <span className={styles.cornerSquare}></span>
           </div>
         </div>
       </div>
-      <div className={styles.footerBottom}>
+      <div className={styles.row}>
         <p>
           All Rights Reserved | © {currentYear} Mission Compassion Foundation
         </p>

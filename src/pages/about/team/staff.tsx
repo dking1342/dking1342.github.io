@@ -50,7 +50,7 @@ const staff = (props: Props) => {
       </Head>
       <main className={globalStyles.pageStyles}>
         {/* hero section */}
-        <HeroAbout />
+        <HeroAbout page="staff" />
         {/* staff list section */}
         <section className={styles.staffSection}>
           <h1>our team</h1>

@@ -1,4 +1,10 @@
 /* hero section styles */
+.heroSection{
+  height: 100%;
+  position: relative;
+  max-height: 100vh;
+  margin-bottom:3rem;
+}
 .heroContent{
   height: 100%;
   width: 95%;

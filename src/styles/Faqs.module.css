@@ -1,0 +1,35 @@
+.faqsSection{
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1250px;
+  width: 95%;
+  align-self: center;
+  margin-bottom: 5rem;
+}
+.faqsSection h1{
+  font-size: clamp(40px,5vw,60px);
+  width: 100%;
+  text-align: center;
+}
+
+.faqsContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.faqsCardContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  padding: 2rem;
+  border-bottom: 1px solid var(--primary-color);
+}
+.faqsCardContainer h2{
+  font-size: 36px;
+}
+.faqsCardContainer p{
+  font-size: 24px;
+}
