@@ -7,9 +7,18 @@ type Props = {
   order: 'rtl' | 'ltr';
   quote: string;
   author: string;
+  quoteColor?: 'primary' | 'secondary' | 'accent';
+  textColor?: 'primary' | 'secondary' | 'accent';
 };
 
-function Quotes({ quote, author, order = 'ltr', headshot }: Props) {
+function Quotes({
+  quote,
+  author,
+  order = 'ltr',
+  headshot,
+  quoteColor = 'primary',
+  textColor = 'primary',
+}: Props) {
   let imageOrder = 1;
   let contentOrder = 2;
 
@@ -39,9 +48,9 @@ function Quotes({ quote, author, order = 'ltr', headshot }: Props) {
         className={styles.textContainer}
         style={{ order: `${contentOrder}` }}
       >
-        <p>“</p>
-        <p>{quote}</p>
-        <p>{author}</p>
+        <p className={styles[quoteColor]}>“</p>
+        <p className={styles[textColor]}>{quote}</p>
+        <p className={styles[textColor]}>{author}</p>
       </div>
     </div>
   );

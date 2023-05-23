@@ -68,15 +68,5 @@
   width: clamp(30px,4vw,60px) !important;
 }
 
-/* about section styles */
-.getToKnowLink{
-  color: var(--secondary-color);
-  font-size: clamp(32px,8vw,50px);
-  text-transform: uppercase;
-  font-weight: 500;
-  border-bottom: 5px solid var(--accent-color);
-  text-align: center;
-  cursor: pointer;  
-}
 
 /* util styles */

@@ -28,7 +28,6 @@
 .textContainer p:nth-child(1){
   font-size: 80px;
   font-weight: 500;
-  color: var(--accent-color);
   height: 50px;  
 }
 .textContainer p:nth-child(2){
@@ -39,6 +38,17 @@
 .textContainer p:nth-child(3){
   font-size: 16px;
   font-style: italic;  
+}
+
+/* util styles */
+.primary {
+  color:var(--primary-color);
+}
+.secondary {
+  color:var(--secondary-color);
+}
+.accent {
+  color:var(--accent-color);
 }
 
 @media (max-width:800px) {

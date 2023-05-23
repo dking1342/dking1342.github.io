@@ -9,6 +9,8 @@
   --accent-color: #ff0000;
   --footer-primary-color: #ddd;
   --footer-secondary-color: #333;
+
+  --hero-max-height: 60vh;
 }
 
 * {

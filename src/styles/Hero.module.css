@@ -4,7 +4,7 @@
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 65% 100%, 0 75%);
   clip-path: polygon(0 0, 100% 0, 100% 90%, 65% 100%, 0 85%);
   height: 500px;
-  max-height: 60vh;
+  max-height: var(--hero-max-height);
 }
 .heroImage{
   /* position:unset !important; */

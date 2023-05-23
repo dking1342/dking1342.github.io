@@ -6,7 +6,7 @@
 .heroImage{
   position:absolute;
   inset: 0;
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat; 

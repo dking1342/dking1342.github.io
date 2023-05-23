@@ -225,7 +225,7 @@ export default function Home(props: Props) {
                 )
               )}
               <div className={globalStyles.infoCard3}>
-                <Link href={'about'} className={styles.getToKnowLink}>
+                <Link href={'about'} className={globalStyles.linkText}>
                   Get to know us
                 </Link>
               </div>
