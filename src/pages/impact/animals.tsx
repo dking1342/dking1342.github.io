@@ -6,6 +6,7 @@ import ImpactCards from '@/components/ImpactCards';
 import { ImpactCardType } from '@/types/cards';
 import Loading from '@/components/Loading';
 import ErrorComponent from '@/components/ErrorComponent';
+import { prefix } from '@/utils/prefix';
 
 type Props = {
   data: ImpactCardType[] | null;
@@ -19,9 +20,11 @@ export const getServerSideProps = async (context: any) => {
   let data: ImpactCardType[] | null = null;
   const url = context.req.url;
   const path = url.split('/').pop().split('.')[0];
+
   try {
     loading = true;
-    const url = `http://localhost:3000/api/impact/?type=${path}`;
+    const pref = prefix();
+    const url = `${pref.url.API_URL}/api/impact/?type=${path}`;
     const response = await fetch(url);
     const payload = await response.json();
 

@@ -7,6 +7,7 @@ import { ImpactCardType } from '@/types/cards';
 import { MdOutlineArrowBack } from 'react-icons/md';
 import Loading from '@/components/Loading';
 import ErrorComponent from '@/components/ErrorComponent';
+import { prefix } from '@/utils/prefix';
 
 type Props = {
   data: ImpactCardType[] | null;
@@ -21,7 +22,8 @@ export const getServerSideProps = async (context: any) => {
   const id = context.params.id;
   try {
     loading = true;
-    const url = `http://localhost:3000/api/impact/?type=animals&id=${id}`;
+    const pref = prefix();
+    const url = `${pref.url.API_URL}/api/impact/?type=animals&id=${id}`;
     const response = await fetch(url);
     const payload = await response.json();
 
