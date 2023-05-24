@@ -67,15 +67,30 @@ const Footer = (props: Props) => {
       href: '/impact',
       link: 'impact',
       sublist: [
-        { id: Math.floor(Math.random() * 10000), href: '/', link: 'community' },
-        { id: Math.floor(Math.random() * 10000), href: '/', link: 'partners' },
-        { id: Math.floor(Math.random() * 10000), href: '/', link: 'customers' },
-        { id: Math.floor(Math.random() * 10000), href: '/', link: 'animals' },
-        { id: Math.floor(Math.random() * 10000), href: '/', link: 'media' },
         {
           id: Math.floor(Math.random() * 10000),
-          href: '/',
-          link: 'recognition',
+          href: '/impact/community',
+          link: 'community',
+        },
+        {
+          id: Math.floor(Math.random() * 10000),
+          href: '/impact/partners',
+          link: 'partners',
+        },
+        {
+          id: Math.floor(Math.random() * 10000),
+          href: '/impact/customers',
+          link: 'customers',
+        },
+        {
+          id: Math.floor(Math.random() * 10000),
+          href: '/impact/animals',
+          link: 'animals',
+        },
+        {
+          id: Math.floor(Math.random() * 10000),
+          href: '/impact/media',
+          link: 'media',
         },
       ],
     },

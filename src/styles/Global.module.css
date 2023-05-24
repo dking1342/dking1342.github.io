@@ -3,6 +3,10 @@
   flex-direction: column;
   gap:5rem;
 }
+.impactGradient{
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,234,234,1) 100%);
+}
 
 /* hero section styles */
 .heroSection{
@@ -89,6 +93,18 @@
   border-bottom: 5px solid var(--accent-color);
   text-align: center;
   cursor: pointer;  
+}
+.link{
+  display: flex;
+  align-content: center;
+  background-color: transparent;
+  outline: none;
+  border:none;
+  cursor: pointer;
+}
+.link span:nth-child(1){
+  display: flex;
+  align-items: center;
 }
 
 @media (max-width:450px) {

@@ -104,7 +104,7 @@ const impact = (props: Props) => {
                 />
               ))}
               <Link
-                href={'/impact/customer'}
+                href={'/impact/customers/'}
                 className={`${globalStyles.linkText} ${styles.link}`}
               >
                 Customer Impact

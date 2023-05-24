@@ -33,3 +33,13 @@ export type StaffType = {
   name: string;
   role: string;
 };
+
+export type ImpactCardType = {
+  id: number;
+  img: string;
+  header: string;
+  body: string;
+  name: string;
+  date: string;
+  type: 'customers' | 'community' | 'animals' | 'partners' | 'media';
+};

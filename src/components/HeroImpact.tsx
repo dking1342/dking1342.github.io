@@ -9,12 +9,11 @@ type Props = {
 
 const HeroImpact = ({ page, subtitle = '' }: Props) => {
   return (
-    <section className={globalStyles.heroSection}>
-      <div className={styles.heroContainer}>
-        <div className={styles.headerContainer}>
-          <h1 className={styles.header}>{page}</h1>
-          <h2 className={styles.subtitle}>{subtitle}</h2>
-        </div>
+    <section className={`${globalStyles.heroSection} ${styles.container}`}>
+      <div className={styles.heroContainer}></div>
+      <div className={styles.headerContainer}>
+        <h1 className={styles.header}>{page}</h1>
+        <h2 className={styles.subtitle}>{subtitle}</h2>
       </div>
     </section>
   );
