@@ -43,3 +43,12 @@ export type ImpactCardType = {
   date: string;
   type: 'customers' | 'community' | 'animals' | 'partners' | 'media';
 };
+
+export type ServiceCardType = {
+  id: number;
+  icon: string;
+  title: string;
+  body: string;
+  link: string;
+  img: string;
+};
