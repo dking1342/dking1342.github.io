@@ -1,23 +1,41 @@
 .container{
-  position:relative;
   height: 100%;
+  position: relative;
+  max-height: var(--hero-max-height);
 }
 
-.heroImage{
-  position:absolute;
-  inset: 0;
-  clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat; 
-  z-index: -1; 
-}
-.heroImage::after{
-  content:"";
-  position:absolute;
-  width: 100%;
+.heroContent{
+  position: absolute;
+  inset:0;
   height: 100%;
-  background:var(--primary-color);
-  opacity:0.7;
-  z-index: -1;
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  color:var(--secondary-color);
+  text-align: center;
+}
+
+.heroContent h1{
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.heroTitleSide{
+  font-size: 22px;
+}
+.heroTitle{
+  font-size: 60px;
+}
+.heroSubtitle{
+  font-size: clamp(14px,4vw,16px);
+  line-height: 1.4;
+  font-weight: 500;  
+}
+.heroMainDonateContainer{
+  z-index: 0;
 }

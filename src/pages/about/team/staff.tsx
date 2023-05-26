@@ -12,33 +12,33 @@ const staff = (props: Props) => {
   const staffList: StaffType[] = [
     {
       id: Math.floor(Math.random() * 10000),
-      src: '/headshot-1.png',
-      name: 'Rahul Patel',
-      role: 'Operations',
+      src: '/headshot-team-1.png',
+      name: 'Amrita Patel',
+      role: 'Executive',
     },
     {
       id: Math.floor(Math.random() * 10000),
-      src: '/headshot-1.png',
-      name: 'Rahul Patel',
-      role: 'Operations',
+      src: '/headshot-team-2.png',
+      name: 'Abhishek Kaur',
+      role: 'Executive',
     },
     {
       id: Math.floor(Math.random() * 10000),
-      src: '/headshot-1.png',
-      name: 'Rahul Patel',
-      role: 'Operations',
+      src: '/headshot-team-3.png',
+      name: 'Manish Chopra',
+      role: 'Volunteer',
     },
     {
       id: Math.floor(Math.random() * 10000),
-      src: '/headshot-1.png',
-      name: 'Rahul Patel',
-      role: 'Operations',
+      src: '/headshot-team-4.png',
+      name: 'Madhuri Dalal',
+      role: 'Executive',
     },
     {
       id: Math.floor(Math.random() * 10000),
-      src: '/headshot-1.png',
-      name: 'Rahul Patel',
-      role: 'Operations',
+      src: '/headshot-team-5.png',
+      name: 'Leela Varma',
+      role: 'Volunteer',
     },
   ];
   return (
@@ -53,7 +53,7 @@ const staff = (props: Props) => {
         <HeroAbout page="staff" />
         {/* staff list section */}
         <section className={styles.staffSection}>
-          <h1>our team</h1>
+          {/* <h1>our team</h1> */}
           <div className={styles.staffCardsContainer}>
             {staffList.map(({ id, src, name, role }) => (
               <div className={styles.staffCardContainer} key={id}>

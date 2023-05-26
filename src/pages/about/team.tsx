@@ -20,26 +20,26 @@ const team = (props: Props) => {
   const team: TeamMemberType[] = [
     {
       id: Math.floor(Math.random() * 10000),
-      src: '/headshot-1.png',
+      src: '/headshot-5.png',
       name: 'Meera Singh',
       role: 'President',
     },
     {
       id: Math.floor(Math.random() * 10000),
-      src: '/headshot-1.png',
+      src: '/headshot-6.png',
       name: 'Akshay Kumar',
       role: 'Vice President',
     },
     {
       id: Math.floor(Math.random() * 10000),
-      src: '/headshot-1.png',
-      name: 'Toptal Yuna',
+      src: '/headshot-7.png',
+      name: 'Kavita Chawla',
       role: 'Director',
     },
     {
       id: Math.floor(Math.random() * 10000),
-      src: '/headshot-1.png',
-      name: 'Gurav Sita',
+      src: '/headshot-8.png',
+      name: 'Gurav Kohli',
       role: 'Manager',
     },
   ];
@@ -113,13 +113,13 @@ const team = (props: Props) => {
           <div className={styles.teamQuotesContainer}>
             <Quotes
               order="ltr"
-              headshot="/headshot-1.png"
+              headshot="/headshot-9.png"
               quote="THE BEST PART OF MY JOB IS KNOWING I AM MAKING A SUFFERING ANIMALS DIFFERENCE IN THE LIVES OF SUFFERING ANIMALS"
               author="nirupa bhatt"
             />
             <Quotes
               order="rtl"
-              headshot="/headshot-2.png"
+              headshot="/headshot-10.png"
               quote="I LOVE ANIMALS AND THIS JOB IS ALLOWING ME TO WORK WITH THE MOST ANIMAL LOVING PEOPLE"
               author="vinesh gupta"
             />
@@ -156,7 +156,7 @@ const team = (props: Props) => {
               alt="partners shaking hands"
               title="PARTNER WITH US"
               body=" We would love to partner with private limited companies which can donate funds and help us achieve our noble cause"
-              href="/"
+              href="/get-involved/contact?type=partner"
               btnText="CONTACT US"
               btnTheme="primary"
             />

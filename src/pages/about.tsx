@@ -102,7 +102,7 @@ const About = (props: Props) => {
           <div className={styles.teamContainer}>
             <div className={styles.headshotContainer}>
               <Image
-                src={'/headshot-3.png'}
+                src={'/headshot-5.png'}
                 alt="headshot of president"
                 fill
                 style={{ objectFit: 'cover', objectPosition: 'center' }}
@@ -135,8 +135,6 @@ const About = (props: Props) => {
             </div>
           </div>
         </section>
-        {/* donate section */}
-        <DonateSection />
         {/* mission section */}
         <section className={globalStyles.missionSection}>
           <MissionTexts

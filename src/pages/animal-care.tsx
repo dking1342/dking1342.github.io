@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import React from 'react';
-import styles from '@/styles/AnimalCare.module.css';
 import globalStyles from '@/styles/Global.module.css';
 import HeroAnimalCare from '@/components/HeroAnimalCare';
 import MissionTexts from '@/components/MissionTexts';
@@ -9,8 +8,6 @@ import { ServiceCardType } from '@/types/cards';
 import { prefix } from '@/utils/prefix';
 import Loading from '@/components/Loading';
 import ErrorComponent from '@/components/ErrorComponent';
-import Link from 'next/link';
-import Image from 'next/image';
 import ServiceCards from '@/components/ServiceCards';
 
 type Props = {

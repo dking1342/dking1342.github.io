@@ -3,7 +3,6 @@ import Image from 'next/image';
 import styles from '@/styles/Home.module.css';
 import globalStyles from '@/styles/Global.module.css';
 import MissionTexts from '@/components/MissionTexts';
-import HeroDonate from '@/components/HeroDonate';
 import HeroMain from '@/components/HeroMain';
 import ClipSlanted from '@/components/ClipSlanted';
 import InfoCard from '@/components/InfoCard';
@@ -14,7 +13,6 @@ import ClipV from '@/components/ClipV';
 import Link from 'next/link';
 import ClipVInner from '@/components/ClipVInner';
 import ClipDoubleSide from '@/components/ClipDoubleSide';
-import DonateSection from '@/components/DonateSection';
 import { InfoCardType } from '@/types/cards';
 import { QuoteType } from '@/types/quotes';
 
@@ -27,20 +25,18 @@ export default function Home(props: Props) {
     {
       id: Math.floor(Math.random() * 10000),
       order: 'ltr',
-      headshot: '/headshot-1.png',
+      headshot: '/headshot-3.png',
       quote:
         'It is my greatest delight to be known as a social worker and the purpose of my life is to work for the benefits of social responsibilities. Love is meant to be unconditional and the primary focus is to serve humanity to make the world a little more happy and compassionate.',
-      author:
-        'Michelle McSwain live in Mumbai with their cat, Julep, and their new son. Michelle is a professional photographer who has voluntarily lent her talents to Mission Compassion. She is a generous Mission Compassion donor, working alongside us to achieve a shared mission.',
+      author: 'Latika Ahuja',
     },
     {
       id: Math.floor(Math.random() * 10000),
       order: 'rtl',
-      headshot: '/headshot-2.png',
+      headshot: '/headshot-4.png',
       quote:
-        'It is my greatest delight to be known as a social worker and the purpose of my life is to work for the benefits of social responsibilities. Love is meant to be unconditional and the primary focus is to serve humanity to make the world a little more happy and compassionate.',
-      author:
-        'Michelle McSwain live in Mumbai with their cat, Julep, and their new son. Michelle is a professional photographer who has voluntarily lent her talents to Mission Compassion. She is a generous Mission Compassion donor, working alongside us to achieve a shared mission.',
+        'You may encounter many defeats, but you must not be defeated. In fact, it may be necessary to encounter the defeats, so you can know who you are, what you can rise from, how you can still come out of it. That is why no animal can feel defeated as long as Mission Compassion is around.',
+      author: 'Keerthi Arya',
     },
   ];
   const infoCardGroupOne: InfoCardType[] = [
@@ -108,27 +104,7 @@ export default function Home(props: Props) {
       </Head>
       <main className={globalStyles.pageStyles}>
         {/* hero section */}
-        <section className={styles.heroSection}>
-          <HeroMain image="main-hero-1.png">
-            <div className={styles.heroContent}>
-              <div className={styles.heroTitleContainer}>
-                <h1>
-                  <span className={styles.heroTitleSide}>
-                    for <br></br> the
-                  </span>
-                  <span className={styles.heroTitle}>felines</span>
-                </h1>
-                <p className={styles.heroSubtitle}>
-                  We exist to create a better world for helpless felines and to
-                  encourage more people to adopt
-                </p>
-              </div>
-              <div className={styles.heroMainDonateContainer}>
-                <HeroDonate />
-              </div>
-            </div>
-          </HeroMain>
-        </section>
+        <HeroMain />
         {/* mission section */}
         <section className={globalStyles.missionSection}>
           <MissionTexts
@@ -232,8 +208,6 @@ export default function Home(props: Props) {
             </div>
           </ClipSlanted>
         </section>
-        {/* donate section */}
-        <DonateSection />
         {/* mission section */}
         <section className={globalStyles.missionSection}>
           <MissionTexts

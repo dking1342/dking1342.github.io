@@ -99,7 +99,36 @@ const Footer = (props: Props) => {
       href: '/animal-care',
       link: 'animal care',
       sublist: [
-        { id: Math.floor(Math.random() * 10000), href: '/', link: 'services' },
+        {
+          id: Math.floor(Math.random() * 10000),
+          href: '/animal-care/1',
+          link: 'neutering',
+        },
+        {
+          id: Math.floor(Math.random() * 10000),
+          href: '/animal-care/2',
+          link: 'deworming',
+        },
+        {
+          id: Math.floor(Math.random() * 10000),
+          href: '/animal-care/3',
+          link: 'rabbies',
+        },
+        {
+          id: Math.floor(Math.random() * 10000),
+          href: '/animal-care/4',
+          link: 'eyes',
+        },
+        {
+          id: Math.floor(Math.random() * 10000),
+          href: '/animal-care/5',
+          link: 'critical care',
+        },
+        {
+          id: Math.floor(Math.random() * 10000),
+          href: '/animal-care/6',
+          link: 'amputations',
+        },
       ],
     },
     {
@@ -107,9 +136,21 @@ const Footer = (props: Props) => {
       href: '/get-involved',
       link: 'get involved',
       sublist: [
-        { id: Math.floor(Math.random() * 10000), href: '/', link: 'time' },
-        { id: Math.floor(Math.random() * 10000), href: '/', link: 'action' },
-        { id: Math.floor(Math.random() * 10000), href: '/', link: 'money' },
+        {
+          id: Math.floor(Math.random() * 10000),
+          href: '/get-involved/contact?type=volunteer',
+          link: 'time',
+        },
+        {
+          id: Math.floor(Math.random() * 10000),
+          href: '/get-involved/contact?type=action',
+          link: 'action',
+        },
+        {
+          id: Math.floor(Math.random() * 10000),
+          href: '/donate',
+          link: 'donate',
+        },
       ],
     },
   ];

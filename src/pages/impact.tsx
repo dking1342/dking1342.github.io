@@ -37,7 +37,7 @@ const impact = (props: Props) => {
     {
       id: Math.floor(Math.random() * 10000),
       order: 'ltr',
-      headshot: '/headshot-2.png',
+      headshot: '/headshot-customer-1.png',
       quote:
         'Mission Compassion taught me how important it is to treat all animals with respect and dignity. The stray I adopted wouldn’t have survived without their compassionate care.',
       author: 'Reena Swati',
@@ -45,17 +45,17 @@ const impact = (props: Props) => {
     {
       id: Math.floor(Math.random() * 10000),
       order: 'rtl',
-      headshot: '/headshot-2.png',
+      headshot: '/headshot-customer-2.png',
       quote:
-        'Mission Compassion taught me how important it is to treat all animals with respect and dignity. The stray I adopted wouldn’t have survived without their compassionate care.',
-      author: 'Reena Swati',
+        'Mission Compassion has been exceptional at teaching me the importance of how special and unique each animal can be regardless of its afflictions',
+      author: 'Malika Laghari',
     },
   ];
   const partnerQuotes: QuoteType[] = [
     {
       id: Math.floor(Math.random() * 10000),
       order: 'ltr',
-      headshot: '/headshot-2.png',
+      headshot: '/headshot-partner-1.png',
       quote:
         'Mission Compassion has been an excellent partner to do business with. They are extremely dedicated to their cause which translates well with our mission.',
       author: 'Vikash Senti',
@@ -63,7 +63,7 @@ const impact = (props: Props) => {
     {
       id: Math.floor(Math.random() * 10000),
       order: 'rtl',
-      headshot: '/headshot-2.png',
+      headshot: '/headshot-partner-2.png',
       quote:
         'It was a pleasure to work in conjunction with Mission Compassion during our joint projects. The amount of love and compassion they show is why they are called Mission Compassion.',
       author: 'Dimple Shah',

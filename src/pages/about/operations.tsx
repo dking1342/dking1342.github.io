@@ -71,7 +71,7 @@ const operations = (props: Props) => {
       title: (
         <MdLocationOn
           color="var(--accent-color)"
-          style={{ width: '100%', height: '100%' }}
+          style={{ width: '50px', height: '100%' }}
         />
       ),
       body: (
@@ -87,7 +87,7 @@ const operations = (props: Props) => {
       title: (
         <MdLocationOn
           color="var(--accent-color)"
-          style={{ width: '100%', height: '100%' }}
+          style={{ width: '50px', height: '100%' }}
         />
       ),
       body: (
@@ -104,7 +104,7 @@ const operations = (props: Props) => {
       title: (
         <AiFillPhone
           color="var(--accent-color)"
-          style={{ width: '100%', height: '100%' }}
+          style={{ width: '50px', height: '100%' }}
         />
       ),
       body: (
@@ -118,7 +118,7 @@ const operations = (props: Props) => {
       title: (
         <AiOutlineMail
           color="var(--accent-color)"
-          style={{ width: '40px', height: '40px' }}
+          style={{ width: '50px', height: '100%' }}
         />
       ),
       body: <p>MISSIONCOMPASSIONFOUNDATION@GMAIL.COM</p>,
@@ -167,7 +167,7 @@ const operations = (props: Props) => {
       title: (
         <HiDocumentText
           color="var(--accent-color)"
-          style={{ width: '100%', height: '100%' }}
+          style={{ width: '100px', height: '100%' }}
         />
       ),
       body: (
@@ -183,7 +183,7 @@ const operations = (props: Props) => {
       title: (
         <HiDocumentText
           color="var(--accent-color)"
-          style={{ width: '100%', height: '100%' }}
+          style={{ width: '100px', height: '100%' }}
         />
       ),
       body: (
@@ -200,7 +200,7 @@ const operations = (props: Props) => {
       title: (
         <HiDocumentText
           color="var(--accent-color)"
-          style={{ width: '100%', height: '100%' }}
+          style={{ width: '100px', height: '100%' }}
         />
       ),
       body: (
@@ -217,7 +217,7 @@ const operations = (props: Props) => {
       title: (
         <HiDocumentText
           color="var(--accent-color)"
-          style={{ width: '100%', height: '100%' }}
+          style={{ width: '100px', height: '100%' }}
         />
       ),
       body: (
@@ -390,24 +390,11 @@ const operations = (props: Props) => {
         {/* company info section */}
         <section className={globalStyles.clipSection}>
           <ClipSlanted bg="primary">
-            <>
-              <div className={styles.rowFirst}>
-                <div className={styles.countryImageContainer}>
-                  <Image
-                    src="/india-1.png"
-                    alt="india country"
-                    height={100}
-                    width={100}
-                    style={{ height: '100%', width: '100%' }}
-                  />
-                </div>
-              </div>
-              <div className={styles.rowLast}>
-                {companyInfo.map(({ id, title, body }) => (
-                  <Card key={id} id={id} title={title} body={body} />
-                ))}
-              </div>
-            </>
+            <div className={styles.rowLast}>
+              {companyInfo.map(({ id, title, body }) => (
+                <Card key={id} id={id} title={title} body={body} />
+              ))}
+            </div>
           </ClipSlanted>
         </section>
         {/* company profile section */}

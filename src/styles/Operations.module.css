@@ -221,3 +221,6 @@
 .highlight{
   color:var(--accent-color);
 }
+.cardContainer svg{
+  height:100px;
+}

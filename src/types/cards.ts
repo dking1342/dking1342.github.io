@@ -52,3 +52,11 @@ export type ServiceCardType = {
   link: string;
   img: string;
 };
+
+export type GetInvolvedCardType = {
+  id: number;
+  icon: string;
+  title: string;
+  body: string;
+  link: string;
+};
