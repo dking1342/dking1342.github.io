@@ -55,6 +55,10 @@
   height: 250px;
   z-index: 2;
 }
+.staffCardImageContainer img{
+  object-fit: cover;
+  object-position: center;
+}
 .staffCardContentContainer{
   width: 100%;
   height: 200px;
