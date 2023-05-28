@@ -9,7 +9,13 @@ type Props = {
 const Hero = ({ image }: Props) => {
   return (
     <div className={styles.heroImageContainer}>
-      <Image src={image} alt="hero image" className={styles.heroImage} fill />
+      <Image
+        src={image}
+        alt="hero image"
+        className={styles.heroImage}
+        fill
+        priority
+      />
     </div>
   );
 };
