@@ -24,7 +24,7 @@ const FormContact = ({ formType }: Props) => {
   return (
     <form
       className={styles.form}
-      action="https://formsubmit.co/kavooce.cheetah@gmail.com"
+      action="https://formsubmit.co/23ec58b20548ed53c42bf2d339072110"
       method="POST"
     >
       <div className={styles.formContainer}>
