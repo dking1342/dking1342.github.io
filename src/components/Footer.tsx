@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from '@/styles/Footer.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -11,6 +11,10 @@ import {
   AiOutlineTwitter,
 } from 'react-icons/ai';
 import { FaFacebookF } from 'react-icons/fa';
+import { FetchData, GeneralFormValues } from '@/types/form';
+import { fetchRequest } from '@/utils/api';
+import { useRouter } from 'next/router';
+import { OutputModel } from '@/types/api';
 
 type Props = {};
 type Sitemap = {
@@ -28,6 +32,16 @@ type Sublist = {
 type Sublists = Sublist[];
 
 const Footer = (props: Props) => {
+  const router = useRouter();
+  const initialState: GeneralFormValues = {
+    firstName: '',
+    lastName: '',
+    email: '',
+    message: '',
+  };
+  const robotInitialState = 0;
+  let [formValues, setFormValues] = useState<GeneralFormValues>(initialState);
+  let [robot, setRobot] = useState(robotInitialState);
   const currentYear = new Date().getFullYear();
   const sitemap: Sitemaps = [
     {
@@ -224,6 +238,30 @@ const Footer = (props: Props) => {
     },
   ];
 
+  const onChange = (e: any, name: string) => {
+    setFormValues({ ...formValues, [name]: e.target.value });
+  };
+  const onRobotChange = () => (robot ? setRobot(0) : setRobot(1));
+
+  const onSubmit = async (e: any) => {
+    e.preventDefault();
+
+    if (robot) {
+      let editedValues: FetchData = {
+        formType: 'general',
+        data: formValues,
+      };
+
+      const data: OutputModel = await fetchRequest(
+        '/api/contact',
+        editedValues
+      );
+      data.success ? router.push('/thanks') : router.push('contact-error');
+      setFormValues(initialState);
+      setRobot(robotInitialState);
+    }
+  };
+
   return (
     <footer className={styles.footer}>
       <div className={`${styles.row}`}>
@@ -286,7 +324,7 @@ const Footer = (props: Props) => {
         </ul>
       </div>
       <div className={`${styles.row}`}>
-        <div className={styles.contactContainer}>
+        <form className={styles.contactContainer} onSubmit={(e) => onSubmit(e)}>
           <div className={styles.contactTitleContainer}>
             <h4>Get in touch with us</h4>
             <h5>we love hearing from you</h5>
@@ -294,11 +332,42 @@ const Footer = (props: Props) => {
           <div className={styles.contactFormContainer}>
             <div className={styles.textContainer}>
               <label htmlFor="firstname">first name</label>
-              <input type="text" id="firstname" name="firstname" />
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                pattern="^[A-Za-z][A-Za-z ]{1,30}"
+                placeholder="Enter first name"
+                required={true}
+                value={formValues.firstName}
+                onChange={(e) => onChange(e, 'firstName')}
+              />
+            </div>
+            <div className={styles.textContainer}>
+              <label htmlFor="firstname">last name</label>
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                pattern="^[A-Za-z][A-Za-z ]{1,30}"
+                placeholder="Enter last name"
+                required={true}
+                value={formValues.lastName}
+                onChange={(e) => onChange(e, 'lastName')}
+              />
             </div>
             <div className={styles.textContainer}>
               <label htmlFor="email">email</label>
-              <input type="email" id="email" name="email" />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                pattern="^.+@.+..+"
+                placeholder="Enter email"
+                required={true}
+                value={formValues.email}
+                onChange={(e) => onChange(e, 'email')}
+              />
             </div>
             <div className={styles.textContainer}>
               <label htmlFor="message">message</label>
@@ -307,11 +376,19 @@ const Footer = (props: Props) => {
                 id="message"
                 cols={10}
                 rows={5}
+                required={true}
+                value={formValues.message}
+                onChange={(e) => onChange(e, 'message')}
               ></textarea>
             </div>
           </div>
           <div className={styles.contactCaptchaContainer}>
-            <input type="checkbox" />
+            <input
+              type="checkbox"
+              value={robot}
+              onChange={() => onRobotChange()}
+              checked={Boolean(robot)}
+            />
             <span>i am not a robot</span>
             <Image
               src={'/captcha.png'}
@@ -321,10 +398,10 @@ const Footer = (props: Props) => {
             />
           </div>
           <div className={styles.contactBtnContainer}>
-            <button className={styles.submitBtn}>submit</button>
+            <input type="submit" value="submit" className={styles.submitBtn} />
             <span className={styles.cornerSquare}></span>
           </div>
-        </div>
+        </form>
       </div>
       <div className={styles.row}>
         <p>
