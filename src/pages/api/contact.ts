@@ -6,7 +6,6 @@ import { volunteerHtmlTemplate } from '@/templates/volunteerHtml';
 import { OutputModel } from '@/types/api';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
-import dotenv from 'dotenv';
 
 type Data = {};
 
@@ -17,7 +16,6 @@ let outputModel: OutputModel = {
   payload: {},
   error: null,
 };
-dotenv.config();
 const email = process.env.NEXT_PUBLIC_EMAIL;
 const pass = process.env.NEXT_PUBLIC_EMAIL_PASSWORD;
 console.log({ email, pass });
