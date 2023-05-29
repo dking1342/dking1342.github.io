@@ -20,6 +20,7 @@ let outputModel: OutputModel = {
 dotenv.config();
 const email = process.env.NEXT_PUBLIC_EMAIL;
 const pass = process.env.NEXT_PUBLIC_EMAIL_PASSWORD;
+console.log({ email, pass });
 
 const handler = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
   if (req.method === 'POST') {
