@@ -256,6 +256,7 @@ const Footer = (props: Props) => {
         '/api/contact',
         editedValues
       );
+      console.log({ data });
       data.success ? router.push('/thanks') : router.push('contact-error');
       setFormValues(initialState);
       setRobot(robotInitialState);

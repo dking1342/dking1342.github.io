@@ -3,7 +3,6 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React from 'react';
 import globalStyles from '@/styles/Global.module.css';
-import styles from '@/styles/Contact.module.css';
 import FormContact from '@/components/FormContact';
 
 type Props = {};
