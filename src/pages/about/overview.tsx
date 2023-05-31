@@ -6,58 +6,14 @@ import Image from 'next/image';
 import MissionTexts from '@/components/MissionTexts';
 import ClipDoubleSide from '@/components/ClipDoubleSide';
 import InfoCard from '@/components/InfoCard';
-import { CoreValueType, InfoCardType } from '@/types/cards';
 import HeroAbout from '@/components/HeroAbout';
+import { coreValues, infoCardGroupThree } from '@/data/aboutOverviewPage';
 
 type Props = {};
 
 const overview = (props: Props) => {
-  const infoCardGroupThree: InfoCardType[] = [
-    {
-      id: Math.floor(Math.random() * 10000),
-      theme: 'secondary',
-      title: 'MISSION',
-      body: 'REDUCE THE STRAY CAT POPULATION TO INCREASE THE LOVE THEY CAN RECEIVE',
-      classStyle: 'infoCard1',
-    },
-    {
-      id: Math.floor(Math.random() * 10000),
-      theme: 'secondary',
-      title: 'VISION',
-      body: 'WE WANT TO PROVIDE A WIDE RANGE OF SERVICES THAT CATER TO STRAY ANIMALS IN INDIA WHICH HOLISTICALLY TREAT EACH ANIMAL PATIENT',
-      classStyle: 'infoCard2',
-    },
-    {
-      id: Math.floor(Math.random() * 10000),
-      theme: 'secondary',
-      title: 'GOALS',
-      body: 'OUR PRIMARY GOAL BETTER WORLD FOR IS TO CREATE A THE HELPLESS ENCOURAGE MORE ANIMALS AND PEOPLE TO ADOPT',
-      classStyle: 'infoCard3',
-    },
-  ];
-  const coreValues: CoreValueType[] = [
-    {
-      id: Math.floor(Math.random() * 10000),
-      src: '/mission.png',
-      title: 'compassion',
-      body: 'Compassion is in our name and it is the most important behavior we can show',
-    },
-    {
-      id: Math.floor(Math.random() * 10000),
-      src: '/vision.png',
-      title: 'change',
-      body: 'We know any difference is made through positive change',
-    },
-    {
-      id: Math.floor(Math.random() * 10000),
-      src: '/goal.png',
-      title: 'action',
-      body: 'Change only takes place through action that is consistent and done with compassion',
-    },
-  ];
-
   return (
-    <section>
+    <>
       <Head>
         <title>Overview</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -138,7 +94,7 @@ const overview = (props: Props) => {
           </div>
         </section>
       </main>
-    </section>
+    </>
   );
 };
 

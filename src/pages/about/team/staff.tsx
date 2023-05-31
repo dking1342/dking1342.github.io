@@ -3,46 +3,14 @@ import React from 'react';
 import styles from '@/styles/Staff.module.css';
 import globalStyles from '@/styles/Global.module.css';
 import Image from 'next/image';
-import { StaffType } from '@/types/cards';
 import HeroAbout from '@/components/HeroAbout';
+import { staffList } from '@/data/aboutStaff';
 
 type Props = {};
 
 const staff = (props: Props) => {
-  const staffList: StaffType[] = [
-    {
-      id: Math.floor(Math.random() * 10000),
-      src: '/headshot-team-1.png',
-      name: 'Amrita Patel',
-      role: 'Executive',
-    },
-    {
-      id: Math.floor(Math.random() * 10000),
-      src: '/headshot-team-2.png',
-      name: 'Abhishek Kaur',
-      role: 'Executive',
-    },
-    {
-      id: Math.floor(Math.random() * 10000),
-      src: '/headshot-team-3.png',
-      name: 'Manish Chopra',
-      role: 'Volunteer',
-    },
-    {
-      id: Math.floor(Math.random() * 10000),
-      src: '/headshot-team-4.png',
-      name: 'Madhuri Dalal',
-      role: 'Executive',
-    },
-    {
-      id: Math.floor(Math.random() * 10000),
-      src: '/headshot-team-5.png',
-      name: 'Leela Varma',
-      role: 'Volunteer',
-    },
-  ];
   return (
-    <section>
+    <>
       <Head>
         <title>Staff</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -79,7 +47,7 @@ const staff = (props: Props) => {
           </div>
         </section>
       </main>
-    </section>
+    </>
   );
 };
 

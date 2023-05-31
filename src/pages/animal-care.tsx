@@ -58,7 +58,7 @@ const animalCare = ({ data, loading, error }: Props) => {
     return <ErrorComponent error={error} />;
   } else if (!loading && data && data.length) {
     return (
-      <section>
+      <>
         <Head>
           <title>Animal Care</title>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -84,7 +84,7 @@ const animalCare = ({ data, loading, error }: Props) => {
             </ClipDoubleSide>
           </section>
         </main>
-      </section>
+      </>
     );
   }
 };

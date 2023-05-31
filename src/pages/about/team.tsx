@@ -11,55 +11,14 @@ import ClipDoubleSide from '@/components/ClipDoubleSide';
 import InfoCard from '@/components/InfoCard';
 import ClipV from '@/components/ClipV';
 import ClipVInner from '@/components/ClipVInner';
-import { PartnerType, TeamMemberType } from '@/types/cards';
 import HeroAbout from '@/components/HeroAbout';
+import { partnersCards, teamCards } from '@/data/aboutTeamPage';
 
 type Props = {};
 
 const team = (props: Props) => {
-  const team: TeamMemberType[] = [
-    {
-      id: Math.floor(Math.random() * 10000),
-      src: '/headshot-5.png',
-      name: 'Meera Singh',
-      role: 'President',
-    },
-    {
-      id: Math.floor(Math.random() * 10000),
-      src: '/headshot-6.png',
-      name: 'Akshay Kumar',
-      role: 'Vice President',
-    },
-    {
-      id: Math.floor(Math.random() * 10000),
-      src: '/headshot-7.png',
-      name: 'Kavita Chawla',
-      role: 'Director',
-    },
-    {
-      id: Math.floor(Math.random() * 10000),
-      src: '/headshot-8.png',
-      name: 'Gurav Kohli',
-      role: 'Manager',
-    },
-  ];
-  const partnersCards: PartnerType[] = [
-    {
-      id: Math.floor(Math.random() * 10000),
-      theme: 'secondary',
-      title: '7',
-      body: 'PARTNERS THAT HAVE BEEN COLLABORATING WITH US TO PROVIDE ANIMAL CARE',
-    },
-    {
-      id: Math.floor(Math.random() * 10000),
-      theme: 'secondary',
-      title: '250',
-      body: 'HOURS SPENT EACH WEEK WITH PARTNERS',
-    },
-  ];
-
   return (
-    <section>
+    <>
       <Head>
         <title>Team</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -82,7 +41,7 @@ const team = (props: Props) => {
             <div className={styles.leadershipContainer}>
               <h1>senior leadership</h1>
               <div className={styles.leadershipCardsContainer}>
-                {team.map(({ id, src, name, role }) => (
+                {teamCards.map(({ id, src, name, role }) => (
                   <div className={styles.leadershipCardContainer} key={id}>
                     <div className={styles.leadershipCardImageContainer}>
                       <Image
@@ -163,7 +122,7 @@ const team = (props: Props) => {
           </ClipV>
         </section>
       </main>
-    </section>
+    </>
   );
 };
 

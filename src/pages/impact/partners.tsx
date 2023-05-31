@@ -1,12 +1,7 @@
-import Head from 'next/head';
 import React from 'react';
-import globalStyles from '@/styles/Global.module.css';
-import HeroImpact from '@/components/HeroImpact';
-import ImpactCards from '@/components/ImpactCards';
 import { ImpactCardType } from '@/types/cards';
-import Loading from '@/components/Loading';
-import ErrorComponent from '@/components/ErrorComponent';
 import { prefix } from '@/utils/prefix';
+import ImpactTopicPage from '@/components/ImpactTopicPage';
 
 type Props = {
   data: ImpactCardType[] | null;
@@ -49,34 +44,14 @@ export const getServerSideProps = async (context: any) => {
 };
 
 const partners = ({ data, loading, error }: Props) => {
-  if (loading) {
-    return <Loading />;
-  } else if (!loading && error) {
-    return <ErrorComponent error={error} />;
-  } else if (!loading && data && data.length) {
-    return (
-      <section>
-        <Head>
-          <title>Impact: Partners</title>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta
-            name="description"
-            content="mission compassion impact page for partners"
-          />
-        </Head>
-        <main
-          className={`${globalStyles.pageStyles} ${globalStyles.impactGradient}`}
-        >
-          {/* hero section */}
-          <HeroImpact page="impact" subtitle="partner" />
-          {/* customer impacts */}
-          <ImpactCards cards={data} />
-        </main>
-      </section>
-    );
-  } else {
-    return <ErrorComponent error="not found" />;
-  }
+  return (
+    <ImpactTopicPage
+      data={data}
+      loading={loading}
+      error={error}
+      name="Partner"
+    />
+  );
 };
 
 export default partners;

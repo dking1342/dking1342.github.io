@@ -4,7 +4,6 @@ import Link from 'next/link';
 import React from 'react';
 import styles from '@/styles/ImpactCard.module.css';
 import { useRouter } from 'next/router';
-import { url } from 'inspector';
 
 type Props = {
   data: ImpactCardType;

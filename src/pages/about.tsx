@@ -8,32 +8,14 @@ import LinkBtn from '@/components/LinkBtn';
 import ClipV from '@/components/ClipV';
 import MissionTexts from '@/components/MissionTexts';
 import ClipVInner from '@/components/ClipVInner';
-import DonateSection from '@/components/DonateSection';
 import HeroAbout from '@/components/HeroAbout';
-import { InfoCardType } from '@/types/cards';
+import { infoCardGroup } from '@/data/aboutPage';
 
 type Props = {};
 
 const About = (props: Props) => {
-  const infoCardGroup: InfoCardType[] = [
-    {
-      id: Math.floor(Math.random() * 10000),
-      theme: 'primary',
-      title: '2',
-      body: 'PROVIDE CRITICAL AND AFFORDABLE LOCATIONS THAT ANIMAL CARE',
-      classStyle: 'infoCard1',
-    },
-    {
-      id: Math.floor(Math.random() * 10000),
-      theme: 'primary',
-      title: '100%',
-      body: 'CERTIFIED WITH GOVERNMENT AND FINANCIAL DOCUMENTATION',
-      classStyle: 'infoCard2',
-    },
-  ];
-
   return (
-    <section>
+    <>
       <Head>
         <title>About</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -178,7 +160,7 @@ const About = (props: Props) => {
           </ClipV>
         </section>
       </main>
-    </section>
+    </>
   );
 };
 

@@ -115,32 +115,32 @@ const Footer = (props: Props) => {
       sublist: [
         {
           id: Math.floor(Math.random() * 10000),
-          href: '/animal-care/1',
+          href: '/animal-care/4df4a7ee-ec7b-434d-b372-09c609182356',
           link: 'neutering',
         },
         {
           id: Math.floor(Math.random() * 10000),
-          href: '/animal-care/2',
+          href: '/animal-care/38ce979a-20fc-46b5-a8a1-22e1863cda64',
           link: 'deworming',
         },
         {
           id: Math.floor(Math.random() * 10000),
-          href: '/animal-care/3',
+          href: '/animal-care/2e8a5082-5bbb-41f6-9ec9-183dc3eb1937',
           link: 'rabbies',
         },
         {
           id: Math.floor(Math.random() * 10000),
-          href: '/animal-care/4',
+          href: '/animal-care/5eaea5f5-d3df-40eb-8093-f761c512a21b',
           link: 'eyes',
         },
         {
           id: Math.floor(Math.random() * 10000),
-          href: '/animal-care/5',
+          href: '/animal-care/466bbab8-b716-447d-a75a-e7cdc562d184',
           link: 'critical care',
         },
         {
           id: Math.floor(Math.random() * 10000),
-          href: '/animal-care/6',
+          href: '/animal-care/7d742e22-24a5-491f-89ed-866fe589c132',
           link: 'amputations',
         },
       ],

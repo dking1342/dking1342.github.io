@@ -39,3 +39,8 @@ ul {
   list-style: none;
 }
 
+input,
+select {
+  border-radius: 0px;
+}
+

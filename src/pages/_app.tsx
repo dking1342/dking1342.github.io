@@ -69,7 +69,7 @@ export default function App({ Component, pageProps }: AppProps) {
         onMobileClick={onMobileClick}
       />
       <TopFiller />
-      <Component mobileToggle={mobileToggle} {...pageProps} />
+      <Component {...pageProps} />
       <Footer />
     </main>
   );

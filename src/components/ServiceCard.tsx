@@ -9,9 +9,9 @@ type Props = {
 };
 
 const ServiceCard = ({ data }: Props) => {
-  const { id, icon, title, link } = data;
+  const { id, icon, title } = data;
   return (
-    <Link href={link} className={styles.cardContainer}>
+    <Link href={`/animal-care/${id}`} className={styles.cardContainer}>
       <hr className={styles.cardBorder}></hr>
       <div className={styles.cardImg}>
         <Image src={icon} alt={title} fill priority sizes="100%" />

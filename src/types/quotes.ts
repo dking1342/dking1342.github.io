@@ -1,5 +1,5 @@
 export type QuoteType = {
-  id: number;
+  id: string;
   order: 'ltr' | 'rtl';
   headshot: string;
   quote: string;

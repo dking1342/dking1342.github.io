@@ -8,70 +8,20 @@ import Quotes from '@/components/Quotes';
 import ClipDoubleSide from '@/components/ClipDoubleSide';
 import Link from 'next/link';
 import ClipSlanted from '@/components/ClipSlanted';
-import { InfoCardType } from '@/types/cards';
-import InfoCard from '@/components/InfoCard';
 import ClipV from '@/components/ClipV';
 import ClipVInner from '@/components/ClipVInner';
-import { QuoteType } from '@/types/quotes';
+import {
+  customerQuotes,
+  partnerQuotes,
+  infoCardGroup,
+} from '@/data/impactPage';
+import InfoCards from '@/components/InfoCards';
 
 type Props = {};
 
 const impact = (props: Props) => {
-  const infoCardGroup: InfoCardType[] = [
-    {
-      id: Math.floor(Math.random() * 10000),
-      theme: 'primary',
-      title: '32',
-      body: 'PROJECTS IN OUR COMMUNITY THAT HAS RESULTED IN LESS STRAYS ON THE STREETS',
-      classStyle: 'infoCard1',
-    },
-    {
-      id: Math.floor(Math.random() * 10000),
-      theme: 'primary',
-      title: '17',
-      body: 'COMMUNITY LEADERS ADVOCATING ON OUR BEHALF TO PROMOTE SOCIAL CAUSES FOR ANIMALS',
-      classStyle: 'infoCard2',
-    },
-  ];
-  const customerQuotes: QuoteType[] = [
-    {
-      id: Math.floor(Math.random() * 10000),
-      order: 'ltr',
-      headshot: '/headshot-customer-1.png',
-      quote:
-        'Mission Compassion taught me how important it is to treat all animals with respect and dignity. The stray I adopted wouldn’t have survived without their compassionate care.',
-      author: 'Reena Swati',
-    },
-    {
-      id: Math.floor(Math.random() * 10000),
-      order: 'rtl',
-      headshot: '/headshot-customer-2.png',
-      quote:
-        'Mission Compassion has been exceptional at teaching me the importance of how special and unique each animal can be regardless of its afflictions',
-      author: 'Malika Laghari',
-    },
-  ];
-  const partnerQuotes: QuoteType[] = [
-    {
-      id: Math.floor(Math.random() * 10000),
-      order: 'ltr',
-      headshot: '/headshot-partner-1.png',
-      quote:
-        'Mission Compassion has been an excellent partner to do business with. They are extremely dedicated to their cause which translates well with our mission.',
-      author: 'Vikash Senti',
-    },
-    {
-      id: Math.floor(Math.random() * 10000),
-      order: 'rtl',
-      headshot: '/headshot-partner-2.png',
-      quote:
-        'It was a pleasure to work in conjunction with Mission Compassion during our joint projects. The amount of love and compassion they show is why they are called Mission Compassion.',
-      author: 'Dimple Shah',
-    },
-  ];
-
   return (
-    <section>
+    <>
       <Head>
         <title>Impact</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -122,11 +72,7 @@ const impact = (props: Props) => {
         <section className={globalStyles.clipSlanted}>
           <ClipSlanted bg="primary">
             <div className={globalStyles.slantedContainer}>
-              {infoCardGroup.map(({ id, theme, title, body, classStyle }) => (
-                <div className={globalStyles[classStyle]} key={id}>
-                  <InfoCard theme={theme} title={title} body={body} />
-                </div>
-              ))}
+              <InfoCards data={infoCardGroup} />
               <div className={globalStyles.infoCard3}>
                 <Link
                   href={'/impact/community'}
@@ -202,7 +148,7 @@ const impact = (props: Props) => {
           </ClipV>
         </section>
       </main>
-    </section>
+    </>
   );
 };
 

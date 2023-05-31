@@ -45,7 +45,8 @@
 }
 .body p{
   line-height: 1.5;
-  font-size: 2rem;
+  font-size: 1rem;
+  white-space: pre-line;
 }
 
 .footer{

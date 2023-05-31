@@ -11,7 +11,7 @@ type Props = {};
 
 const getInvolved = (props: Props) => {
   return (
-    <section>
+    <>
       <Head>
         <title>Get Involved</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -48,7 +48,7 @@ const getInvolved = (props: Props) => {
           </ClipV>
         </section>
       </main>
-    </section>
+    </>
   );
 };
 
