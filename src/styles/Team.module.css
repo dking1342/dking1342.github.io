@@ -19,24 +19,28 @@
   color: var(--accent-color);
 }
 .leadershipCardsContainer{
-  padding: 0 2rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
-  justify-items: center;
   max-width: 1000px;
   width: 100%;
-  gap: 9rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  row-gap: 3rem;
 }
 .leadershipCardContainer{
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  min-width: 200px;
+  max-width: 325px;
+  width: 100%;
 }
 .leadershipCardContentContainer{
   width: 100%;
   color: var(--secondary-color);
   text-align: center;
+
 }
 .leadershipCardContentContainer h2{
   font-size: 2rem;
@@ -73,8 +77,8 @@
   font-size: clamp(36px, 3vw,50px);
   text-align: center;
   text-transform: uppercase;
-  max-width: 1000px;  
-  width: 98%;
+  max-width: var(--max-width); 
+  width: var(--width-percentage);
 }
 .quotesLinkContainer a{
   border-bottom: 5px solid var(--accent-color);

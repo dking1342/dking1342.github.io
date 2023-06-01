@@ -1,14 +1,14 @@
 import React from 'react';
 import styles from '@/styles/Operations.module.css';
 import { CompanyInfo } from '@/types/cards';
-import Icon from './icons/Icon';
+import Icon from '../icons/Icon';
 
 type Props = {
   item: CompanyInfo;
 };
 
 const CompanyCard = ({ item }: Props) => {
-  const { id, icon, iconColor, iconWidth, iconHeight, body } = item;
+  const { icon, iconColor, iconWidth, iconHeight, body } = item;
   return (
     <div className={styles.comanyCardcontainer}>
       <hr className={styles.cardBorder}></hr>

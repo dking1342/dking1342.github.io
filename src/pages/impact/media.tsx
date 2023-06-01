@@ -1,11 +1,5 @@
-import Head from 'next/head';
 import React from 'react';
-import globalStyles from '@/styles/Global.module.css';
-import HeroImpact from '@/components/HeroImpact';
-import ImpactCards from '@/components/ImpactCards';
 import { ImpactCardType } from '@/types/cards';
-import Loading from '@/components/Loading';
-import ErrorComponent from '@/components/ErrorComponent';
 import { prefix } from '@/utils/prefix';
 import ImpactTopicPage from '@/components/ImpactTopicPage';
 

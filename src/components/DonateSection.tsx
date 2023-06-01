@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '@/styles/DonateSection.module.css';
-import HeroDonate from './HeroDonate';
+import HeroDonate from './heros/HeroDonate';
 
 type Props = {};
 

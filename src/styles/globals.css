@@ -11,6 +11,12 @@
   --footer-secondary-color: #333;
 
   --hero-max-height: 60vh;
+  --max-width:1000px;
+  --max-width-lg:1250px;
+  --width-percentage:95%;
+  --card-max-width:300px;
+  --card-width:95%;
+  --clip-path:polygon(0 0, 100% 0, 100% 90%, 65% 100%, 0 85%);
 }
 
 * {
@@ -40,7 +46,9 @@ ul {
 }
 
 input,
-select {
+select,
+textarea {
   border-radius: 0px;
+  color:var(--primary-color);
 }
 

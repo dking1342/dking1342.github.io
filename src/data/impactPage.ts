@@ -1,4 +1,4 @@
-import { InfoCardType } from '@/types/cards';
+import { InfoCardType, QuoteCardType } from '@/types/cards';
 import { QuoteType } from '@/types/quotes';
 import { v4 as uuid } from 'uuid';
 
@@ -18,7 +18,7 @@ export const infoCardGroup: InfoCardType[] = [
     classStyle: 'infoCard2',
   },
 ];
-export const customerQuotes: QuoteType[] = [
+export const customerQuotes: QuoteCardType[] = [
   {
     id: uuid(),
     order: 'ltr',
@@ -26,6 +26,8 @@ export const customerQuotes: QuoteType[] = [
     quote:
       'Mission Compassion taught me how important it is to treat all animals with respect and dignity. The stray I adopted wouldn’t have survived without their compassionate care.',
     author: 'Reena Swati',
+    quoteColor: 'accent',
+    textColor: 'secondary',
   },
   {
     id: uuid(),
@@ -34,9 +36,11 @@ export const customerQuotes: QuoteType[] = [
     quote:
       'Mission Compassion has been exceptional at teaching me the importance of how special and unique each animal can be regardless of its afflictions',
     author: 'Malika Laghari',
+    quoteColor: 'accent',
+    textColor: 'secondary',
   },
 ];
-export const partnerQuotes: QuoteType[] = [
+export const partnerQuotes: QuoteCardType[] = [
   {
     id: uuid(),
     order: 'ltr',
@@ -44,6 +48,8 @@ export const partnerQuotes: QuoteType[] = [
     quote:
       'Mission Compassion has been an excellent partner to do business with. They are extremely dedicated to their cause which translates well with our mission.',
     author: 'Vikash Senti',
+    quoteColor: 'accent',
+    textColor: 'secondary',
   },
   {
     id: uuid(),
@@ -52,5 +58,7 @@ export const partnerQuotes: QuoteType[] = [
     quote:
       'It was a pleasure to work in conjunction with Mission Compassion during our joint projects. The amount of love and compassion they show is why they are called Mission Compassion.',
     author: 'Dimple Shah',
+    quoteColor: 'accent',
+    textColor: 'secondary',
   },
 ];

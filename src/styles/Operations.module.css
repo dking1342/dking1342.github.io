@@ -14,7 +14,7 @@
   gap:3rem;
   align-items: flex-start;
   justify-content: center;
-  max-width: 1250px;
+  max-width: var(--max-width-lg);
   flex-wrap: wrap;
 }
 
@@ -23,8 +23,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 1000px;
-  width: 95%;
+  max-width: var(--max-width);
+  width: var(--width-percentage);
 }
 
 
@@ -64,8 +64,8 @@
   height: fit-content;
 }
 .profileCardContainer{
-  width: 95%;
-  max-width: 1250px;
+  width: var(--width-percentage);
+  max-width: var(--max-width-lg);
   padding: 3rem;
   display: flex;
   gap: 2rem;
@@ -107,14 +107,13 @@
   gap: 2rem;
   align-items: center;
   justify-content: center;
-  max-width: 1000px;
-  width: 95%;
+  max-width: var(--max-width);
+  width: var(--width-percentage);
   margin:0 auto;
 }
 .documentCardContainer{
   width: 100%;
   max-width: 300px;
-  height: 350px;
   background-color: var(--secondary-color);
   display: flex;
   flex-direction: column;
@@ -122,12 +121,16 @@
   justify-content: space-around;
   align-items: center;
   overflow-wrap: normal;
+  gap:1.5rem;
 }
-.documentCardContainer h2{
-  font-size: 75px;
+.documentCardImageContainer{
+  width: 100%;
   text-align: center;
-  margin-bottom: 2rem;
   color:var(--accent-color);
+}
+.documentCardImageContainer svg {
+  height: 100% !important;
+  width: 100% !important;
 }
 .documentCardContainer p{
   width: 100%;
@@ -211,6 +214,7 @@
   border: none;
   font-size: 36px;
   color: white;
+  cursor: pointer;
 }
 .modal::backdrop{
   background: linear-gradient(45deg, black, grey);

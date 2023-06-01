@@ -2,8 +2,8 @@
   background-color: var(--primary-color);
   color:var(--secondary-color);
   position:relative;
-  max-width: 1000px;
-  width: 95%;
+  max-width: var(--max-width);
+  width: var(--width-percentage);
   margin:0 auto;
   margin-bottom: 3rem;
 }

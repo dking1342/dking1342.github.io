@@ -2,23 +2,24 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from '@/styles/Home.module.css';
 import globalStyles from '@/styles/Global.module.css';
-import MissionTexts from '@/components/MissionTexts';
-import HeroMain from '@/components/HeroMain';
-import ClipSlanted from '@/components/ClipSlanted';
-import InfoCard from '@/components/InfoCard';
-import MissionText from '@/components/MissionText';
-import Quotes from '@/components/Quotes';
+import MissionText from '@/components/cards/MissionText';
 import ImageSection from '@/components/ImageSection';
-import ClipV from '@/components/ClipV';
 import Link from 'next/link';
-import ClipVInner from '@/components/ClipVInner';
-import ClipDoubleSide from '@/components/ClipDoubleSide';
+import ClipDoubleSide from '@/components/ui/ClipDoubleSide';
 import {
   infoCardGroupOne,
   infoCardGroupThree,
   infoCardGroupTwo,
   quotesArray,
 } from '@/data/homePage';
+import formStyles from '@/styles/InfoCard.module.css';
+import MissionTexts from '@/components/cards/MissionTexts';
+import InfoCards from '@/components/cards/InfoCards';
+import QuoteCards from '@/components/cards/QuoteCards';
+import HeroMain from '@/components/heros/HeroMain';
+import ClipSlanted from '@/components/ui/ClipSlanted';
+import ClipV from '@/components/ui/ClipV';
+import ClipVInner from '@/components/ui/ClipVInner';
 
 type Props = {};
 
@@ -45,14 +46,8 @@ export default function Home(props: Props) {
         <section className={globalStyles.clipSection}>
           <ClipSlanted bg={'primary'}>
             <div className={globalStyles.slantedContainer}>
-              {infoCardGroupOne.map(
-                ({ id, theme, title, body, classStyle }) => (
-                  <div className={globalStyles[classStyle]} key={id}>
-                    <InfoCard theme={theme} title={title} body={body} />
-                  </div>
-                )
-              )}
-              <div className={globalStyles.infoCard3}>
+              <InfoCards data={infoCardGroupOne} />
+              <div className={formStyles.infoCard3}>
                 <MissionText
                   text={
                     'We aim to improve the conditions for street animals in our city'
@@ -83,15 +78,7 @@ export default function Home(props: Props) {
             </span>{' '}
             people
           </h3>
-          {quotesArray.map((q) => (
-            <Quotes
-              key={q.id}
-              order={q.order}
-              headshot={q.headshot}
-              quote={q.quote}
-              author={q.author}
-            />
-          ))}
+          <QuoteCards data={quotesArray} />
         </section>
         {/* impact section */}
         <section>
@@ -121,14 +108,8 @@ export default function Home(props: Props) {
         <section className={globalStyles.clipSection}>
           <ClipSlanted bg="primary">
             <div className={globalStyles.slantedContainer}>
-              {infoCardGroupTwo.map(
-                ({ id, theme, title, body, classStyle }) => (
-                  <div className={globalStyles[classStyle]} key={id}>
-                    <InfoCard theme={theme} title={title} body={body} />
-                  </div>
-                )
-              )}
-              <div className={globalStyles.infoCard3}>
+              <InfoCards data={infoCardGroupTwo} />
+              <div className={formStyles.infoCard3}>
                 <Link href={'about'} className={globalStyles.linkText}>
                   Get to know us
                 </Link>
@@ -170,11 +151,7 @@ export default function Home(props: Props) {
         <section className={globalStyles.doubleClipSection}>
           <ClipDoubleSide theme="primary">
             <div className={globalStyles.doubleClipContainer}>
-              {infoCardGroupThree.map(({ id, theme, title, body }) => (
-                <div className={globalStyles.doubleClipCardContainer} key={id}>
-                  <InfoCard theme={theme} title={title} body={body} />
-                </div>
-              ))}
+              <InfoCards data={infoCardGroupThree} />
             </div>
           </ClipDoubleSide>
         </section>

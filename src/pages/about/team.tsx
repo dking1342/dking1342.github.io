@@ -3,16 +3,16 @@ import React from 'react';
 import styles from '@/styles/Team.module.css';
 import globalStyles from '@/styles/Global.module.css';
 import Image from 'next/image';
-import MissionTexts from '@/components/MissionTexts';
-import ClipSlanted from '@/components/ClipSlanted';
-import Quotes from '@/components/Quotes';
 import Link from 'next/link';
-import ClipDoubleSide from '@/components/ClipDoubleSide';
-import InfoCard from '@/components/InfoCard';
-import ClipV from '@/components/ClipV';
-import ClipVInner from '@/components/ClipVInner';
-import HeroAbout from '@/components/HeroAbout';
-import { partnersCards, teamCards } from '@/data/aboutTeamPage';
+import ClipDoubleSide from '@/components/ui/ClipDoubleSide';
+import { partnersCards, quoteCards, teamCards } from '@/data/aboutTeamPage';
+import MissionTexts from '@/components/cards/MissionTexts';
+import QuoteCards from '@/components/cards/QuoteCards';
+import InfoCards from '@/components/cards/InfoCards';
+import HeroAbout from '@/components/heros/HeroAbout';
+import ClipSlanted from '@/components/ui/ClipSlanted';
+import ClipV from '@/components/ui/ClipV';
+import ClipVInner from '@/components/ui/ClipVInner';
 
 type Props = {};
 
@@ -70,21 +70,12 @@ const team = (props: Props) => {
         <section className={styles.teamQuotesSection}>
           <h1>what is our team saying?</h1>
           <div className={styles.teamQuotesContainer}>
-            <Quotes
-              order="ltr"
-              headshot="/headshot-9.png"
-              quote="THE BEST PART OF MY JOB IS KNOWING I AM MAKING A SUFFERING ANIMALS DIFFERENCE IN THE LIVES OF SUFFERING ANIMALS"
-              author="nirupa bhatt"
-            />
-            <Quotes
-              order="rtl"
-              headshot="/headshot-10.png"
-              quote="I LOVE ANIMALS AND THIS JOB IS ALLOWING ME TO WORK WITH THE MOST ANIMAL LOVING PEOPLE"
-              author="vinesh gupta"
-            />
+            <QuoteCards data={quoteCards} />
           </div>
           <div className={styles.quotesLinkContainer}>
-            <Link href={'/about/team/staff'}>Meet the rest of our team</Link>
+            <Link className={globalStyles.linkText} href={'/about/team/staff'}>
+              Meet the rest of our team
+            </Link>
           </div>
         </section>
         {/* mission section */}
@@ -99,11 +90,7 @@ const team = (props: Props) => {
         <section className={globalStyles.doubleClipSection}>
           <ClipDoubleSide theme="accent">
             <div className={globalStyles.doubleClipContainer}>
-              {partnersCards.map(({ id, theme, title, body }) => (
-                <div className={globalStyles.doubleClipCardContainer} key={id}>
-                  <InfoCard theme={`${theme}`} title={title} body={body} />
-                </div>
-              ))}
+              <InfoCards data={partnersCards} />
             </div>
           </ClipDoubleSide>
         </section>

@@ -20,16 +20,14 @@
 .heroCallContainer h5{
   position: absolute;
   font-weight: 200;
-
 }
-
 
 .heroCallContainer h1{
   left: -9cqw;
   top: 4cqw;
   transform: rotate(-90deg);
   font-size: 3cqw;
-  color: #15fefe;
+  color: var(--primary-color);
   transform-origin: 100% 0;
 }
 .heroCallContainer h2{
@@ -39,24 +37,24 @@
   left: 2cqw;
 }
 .heroCallContainer h3{
-  left: -5.5cqw;
+  left: -6cqw;
   top: 4cqw;
   transform: rotate(-90deg);
-  font-size: 3cqw;
+  font-size: 3.1cqw;
   color: var(--accent-color);
   transform-origin: 100% 0;
 }
 .heroCallContainer h4{
   top: 4cqw;
   left: 9cqw;
-  font-size: 1.75cqw;
+  font-size: 1.8cqw;
   color: var(--secondary-color);
 }
 .heroCallContainer h5{
-  top: 6cqw;
+  top: 6.5cqw;
   left: 9cqw;
   font-size: 2cqw;
-  color: #fdfd1c;
+  color: var(--primary-color);
 }
 .heroImageContainer{
   position: absolute;
@@ -68,10 +66,10 @@
 
 .currentPage{
   position: absolute;
-  top: 17cqw;
-  left: 3cqw;
+  top: 15cqw;
+  left: 2.5cqw;
   color: var(--secondary-color);
-  font-size: 3cqw;
+  font-size: 3.5cqw;
   text-transform: capitalize;
 }
 .currentPage h1{

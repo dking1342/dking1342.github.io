@@ -3,9 +3,9 @@ import React from 'react';
 import Loading from './Loading';
 import ErrorComponent from './ErrorComponent';
 import Head from 'next/head';
-import HeroImpact from './HeroImpact';
-import ImpactCards from './ImpactCards';
 import globalStyles from '@/styles/Global.module.css';
+import ImpactCards from './cards/ImpactCards';
+import HeroImpact from './heros/HeroImpact';
 
 type Props = {
   data: ImpactCardType[] | null;

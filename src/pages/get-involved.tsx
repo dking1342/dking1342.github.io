@@ -1,11 +1,12 @@
 import Head from 'next/head';
 import React from 'react';
 import globalStyles from '@/styles/Global.module.css';
-import MissionTexts from '@/components/MissionTexts';
-import HeroGetInvolved from '@/components/HeroGetInvolved';
-import GetInvolvedCards from '@/components/GetInvolvedCards';
-import ClipV from '@/components/ClipV';
-import ClipVInner from '@/components/ClipVInner';
+import { getInvolvedCards } from '@/data/getInvolved';
+import MissionTexts from '@/components/cards/MissionTexts';
+import GetInvolvedCards from '@/components/cards/GetInvolvedCards';
+import HeroGetInvolved from '@/components/heros/HeroGetInvolved';
+import ClipV from '@/components/ui/ClipV';
+import ClipVInner from '@/components/ui/ClipVInner';
 
 type Props = {};
 
@@ -32,7 +33,7 @@ const getInvolved = (props: Props) => {
           />
         </section>
         <section>
-          <GetInvolvedCards />
+          <GetInvolvedCards data={getInvolvedCards} />
         </section>
         <section>
           <ClipV>

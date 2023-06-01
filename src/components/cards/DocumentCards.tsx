@@ -21,22 +21,6 @@ const DocumentCards = ({ data }: Props) => {
   let [isDialogImageSecond, setIsDialogImageSecond] = useState<boolean>(false);
   let [dialogImageAlt, setDialogImageAlt] = useState<string>('alt caption');
 
-  // const openDialog = (src: string, alt: string, src2?: string | undefined) => {
-  //   if (src2) {
-  //     setIsDialogImageSecond(true);
-  //     setDialogImage(src);
-  //     setDialogImageSecond(src2);
-  //   } else {
-  //     setIsDialogImageSecond(false);
-  //     setDialogImage(src);
-  //   }
-
-  //   document.querySelector('html')!.style.overflowY = 'hidden';
-  //   setDialogImageAlt(alt);
-  //   setIsModalOpen(true);
-  //   dialog.current!.showModal();
-  // };
-
   const closeDialog = (e: any) => {
     e.preventDefault();
     document.querySelector('html')!.style.overflowY = '';

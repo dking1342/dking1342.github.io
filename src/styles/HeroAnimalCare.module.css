@@ -10,8 +10,8 @@
 	animation: gradient 15s ease infinite;
 	height: 100vh;
   height: 100%;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 65% 100%, 0 75%);
-  clip-path: polygon(0 0, 100% 0, 100% 90%, 65% 100%, 0 85%);
+  -webkit-clip-path: var(--clip-path);
+  clip-path: var(--clip-path);
 }
 .heroContainer{
   position: absolute;

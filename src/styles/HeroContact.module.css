@@ -1,8 +1,8 @@
 .heroImageContainer{
   position: relative;
   inset: 0;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 65% 100%, 0 85%);
-  clip-path: polygon(0 0, 100% 0, 100% 90%, 65% 100%, 0 85%);
+  -webkit-clip-path: var(--clip-path);
+  clip-path: var(--clip-path);
   height: 500px;
   max-height: var(--hero-max-height);
 }
@@ -26,10 +26,10 @@
 .heroContainer{
   position: absolute;
   inset:0;
-  width: 100%;
+  width: var(--width-percentage);
   height: 100%;
   color:var(--secondary-color);
-  max-width: 1000px;
+  max-width: var(--max-width);
   margin:0 auto;
   display: flex;
   flex-direction: column;

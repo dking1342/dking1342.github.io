@@ -9,6 +9,17 @@ export type InfoCardType = {
   classStyle: string;
 };
 
+// quote cards
+export type QuoteCardType = {
+  id: string;
+  headshot: string;
+  order: 'rtl' | 'ltr';
+  quote: string;
+  author: string;
+  quoteColor?: 'primary' | 'secondary' | 'accent';
+  textColor?: 'primary' | 'secondary' | 'accent';
+};
+
 // core values cards
 export type CoreValueType = {
   id: string;
@@ -63,8 +74,11 @@ export type ServiceCardType = {
 
 // get involved cards
 export type GetInvolvedCardType = {
-  id: number;
+  id: string;
   icon: string;
+  iconWidth: string;
+  iconHeight: string;
+  iconColor: string;
   title: string;
   body: string;
   link: string;

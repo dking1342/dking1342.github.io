@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '@/styles/Operations.module.css';
 import { DocumentInfo } from '@/types/cards';
-import Icon from './icons/Icon';
+import Icon from '../icons/Icon';
 
 type Props = {
   item: DocumentInfo;
@@ -42,14 +42,14 @@ const DocumentCard = ({
 
   return (
     <div className={styles.documentCardContainer}>
-      <h2>
+      <div className={styles.documentCardImageContainer}>
         <Icon
           name={icon}
           color={iconColor}
           width={iconWidth}
           height={iconHeight}
         />
-      </h2>
+      </div>
       <p>{body}</p>
       <button
         className={styles.docsbtn}

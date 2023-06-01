@@ -1,24 +1,21 @@
-import React from 'react';
+import { QuoteCardType } from '@/types/cards';
 import styles from '@/styles/Quotes.module.css';
 import Image from 'next/image';
+import React from 'react';
 
 type Props = {
-  headshot: string;
-  order: 'rtl' | 'ltr';
-  quote: string;
-  author: string;
-  quoteColor?: 'primary' | 'secondary' | 'accent';
-  textColor?: 'primary' | 'secondary' | 'accent';
+  item: QuoteCardType;
 };
 
-function Quotes({
-  quote,
-  author,
-  order = 'ltr',
-  headshot,
-  quoteColor = 'primary',
-  textColor = 'primary',
-}: Props) {
+const QuoteCard = ({ item }: Props) => {
+  const {
+    order,
+    headshot,
+    quote,
+    author,
+    quoteColor = 'primary',
+    textColor = 'primary',
+  } = item;
   let imageOrder = 1;
   let contentOrder = 2;
 
@@ -54,6 +51,6 @@ function Quotes({
       </div>
     </div>
   );
-}
+};
 
-export default Quotes;
+export default QuoteCard;

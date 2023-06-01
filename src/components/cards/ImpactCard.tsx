@@ -3,14 +3,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import styles from '@/styles/ImpactCard.module.css';
-import { useRouter } from 'next/router';
 
 type Props = {
   data: ImpactCardType;
 };
 
 const ImpactCard = ({ data }: Props) => {
-  const router = useRouter();
   const { id, img, header, body, name, date, type } = data;
 
   return (

@@ -130,8 +130,8 @@
 /* util styles */
 .ul{
   display: flex;
-  max-width: 1250px;
-  width: 95%;
+  max-width: var(--max-width-lg);
+  width: var(--width-percentage);
   align-self:center;
   justify-content: center;
 }

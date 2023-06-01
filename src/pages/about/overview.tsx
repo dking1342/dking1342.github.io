@@ -3,11 +3,11 @@ import React from 'react';
 import styles from '@/styles/Overview.module.css';
 import globalStyles from '@/styles/Global.module.css';
 import Image from 'next/image';
-import MissionTexts from '@/components/MissionTexts';
-import ClipDoubleSide from '@/components/ClipDoubleSide';
-import InfoCard from '@/components/InfoCard';
-import HeroAbout from '@/components/HeroAbout';
+import ClipDoubleSide from '@/components/ui/ClipDoubleSide';
 import { coreValues, infoCardGroupThree } from '@/data/aboutOverviewPage';
+import MissionTexts from '@/components/cards/MissionTexts';
+import InfoCards from '@/components/cards/InfoCards';
+import HeroAbout from '@/components/heros/HeroAbout';
 
 type Props = {};
 
@@ -37,11 +37,7 @@ const overview = (props: Props) => {
         <section className={globalStyles.doubleClipSection}>
           <ClipDoubleSide theme="primary">
             <div className={globalStyles.doubleClipContainer}>
-              {infoCardGroupThree.map(({ id, theme, title, body }) => (
-                <div className={globalStyles.doubleClipCardContainer} key={id}>
-                  <InfoCard theme={theme} title={title} body={body} />
-                </div>
-              ))}
+              <InfoCards data={infoCardGroupThree} />
             </div>
           </ClipDoubleSide>
         </section>

@@ -1,6 +1,6 @@
 .container{
-  width: 90%;
-  max-width: 1000px;
+  width: var(--width-percentage);
+  max-width: var(--max-width);
   height: fit-content;
   display: flex;
   align-items: center;

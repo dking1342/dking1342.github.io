@@ -15,7 +15,6 @@
 .cardImg{
   width: 75px;
   height: 75px;
-  /* max-height: 300px; */
   overflow: hidden;
   position: relative;
 }

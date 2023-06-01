@@ -3,8 +3,8 @@
  align-items: flex-start;
  justify-content: center;
  gap:2rem;
- max-width: 1250px;
- width: 95%; 
+ max-width: var(--max-width);
+ width: var(--width-percentage); 
  margin:0 auto;
  flex-wrap: wrap;
  margin-bottom: 3rem;

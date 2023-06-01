@@ -10,6 +10,6 @@
 .imageContainer img{
   position:unset !important;
   height: 100%;
-  width: 95%;
-  max-width: 1000px;
+  width: var(--width-percentage);
+  max-width: var(--max-width);
 }

@@ -3,18 +3,24 @@ import React from 'react';
 import styles from '@/styles/GetInvolvedCard.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
+import Icon from '../icons/Icon';
 
 type Props = {
-  card: GetInvolvedCardType;
+  item: GetInvolvedCardType;
 };
 
-const GetInvolvedCard = ({ card }: Props) => {
-  const { id, icon, title, body, link } = card;
+const GetInvolvedCard = ({ item }: Props) => {
+  const { icon, iconWidth, iconHeight, iconColor, title, body, link } = item;
 
   return (
     <div className={styles.container}>
       <header>
-        <Image src={icon} alt={title} width={100} height={100} />
+        <Icon
+          name={icon}
+          width={iconWidth}
+          height={iconHeight}
+          color={iconColor}
+        />
       </header>
       <div className={styles.body}>
         <h1>{title}</h1>

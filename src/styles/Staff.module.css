@@ -5,8 +5,8 @@
   gap: 10rem;
   align-items: center;
   padding-bottom: 3rem;
-  max-width: 1500px;
-  width: 95%;
+  max-width: var(--max-width-lg);
+  width: var(--width-percentage);
   margin: 0 auto;
 }
 .staffSection h1{

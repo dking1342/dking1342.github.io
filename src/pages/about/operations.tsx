@@ -1,18 +1,18 @@
 import Head from 'next/head';
 import styles from '@/styles/Operations.module.css';
 import globalStyles from '@/styles/Global.module.css';
-import MissionTexts from '@/components/MissionTexts';
-import ClipSlanted from '@/components/ClipSlanted';
-import ClipDoubleSide from '@/components/ClipDoubleSide';
-import HeroAbout from '@/components/HeroAbout';
-import CompanyCards from '@/components/CompanyCards';
+import ClipDoubleSide from '@/components/ui/ClipDoubleSide';
 import {
   companyInfo,
   documentInfo,
   profileInfo,
 } from '@/data/aboutOperationsPage';
-import ProfileCards from '@/components/ProfileCards';
-import DocumentCards from '@/components/DocumentCards';
+import MissionTexts from '@/components/cards/MissionTexts';
+import CompanyCards from '@/components/cards/CompanyCards';
+import ProfileCards from '@/components/cards/ProfileCards';
+import DocumentCards from '@/components/cards/DocumentCards';
+import HeroAbout from '@/components/heros/HeroAbout';
+import ClipSlanted from '@/components/ui/ClipSlanted';
 
 type Props = {};
 

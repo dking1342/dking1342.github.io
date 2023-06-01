@@ -1,7 +1,7 @@
-import MissionTexts from '@/components/MissionTexts';
 import React from 'react';
 import globalStyles from '@/styles/Global.module.css';
 import Head from 'next/head';
+import MissionTexts from '@/components/cards/MissionTexts';
 
 type Props = {};
 

@@ -1,21 +1,22 @@
 import Head from 'next/head';
 import React from 'react';
 import globalStyles from '@/styles/Global.module.css';
+import formStyles from '@/styles/InfoCard.module.css';
 import styles from '@/styles/Impact.module.css';
-import HeroImpact from '@/components/HeroImpact';
-import MissionTexts from '@/components/MissionTexts';
-import Quotes from '@/components/Quotes';
-import ClipDoubleSide from '@/components/ClipDoubleSide';
+import ClipDoubleSide from '@/components/ui/ClipDoubleSide';
 import Link from 'next/link';
-import ClipSlanted from '@/components/ClipSlanted';
-import ClipV from '@/components/ClipV';
-import ClipVInner from '@/components/ClipVInner';
 import {
   customerQuotes,
   partnerQuotes,
   infoCardGroup,
 } from '@/data/impactPage';
-import InfoCards from '@/components/InfoCards';
+import MissionTexts from '@/components/cards/MissionTexts';
+import QuoteCards from '@/components/cards/QuoteCards';
+import InfoCards from '@/components/cards/InfoCards';
+import HeroImpact from '@/components/heros/HeroImpact';
+import ClipSlanted from '@/components/ui/ClipSlanted';
+import ClipV from '@/components/ui/ClipV';
+import ClipVInner from '@/components/ui/ClipVInner';
 
 type Props = {};
 
@@ -42,17 +43,7 @@ const impact = (props: Props) => {
         <section className={globalStyles.doubleClipSection}>
           <ClipDoubleSide theme="primary">
             <div className={styles.customerImpactContainer}>
-              {customerQuotes.map(({ id, headshot, order, quote, author }) => (
-                <Quotes
-                  key={id}
-                  headshot={headshot}
-                  order={order}
-                  quote={quote}
-                  author={author}
-                  quoteColor="accent"
-                  textColor="secondary"
-                />
-              ))}
+              <QuoteCards data={customerQuotes} />
               <Link
                 href={'/impact/customers/'}
                 className={`${globalStyles.linkText} ${styles.link}`}
@@ -73,7 +64,7 @@ const impact = (props: Props) => {
           <ClipSlanted bg="primary">
             <div className={globalStyles.slantedContainer}>
               <InfoCards data={infoCardGroup} />
-              <div className={globalStyles.infoCard3}>
+              <div className={formStyles.infoCard3}>
                 <Link
                   href={'/impact/community'}
                   className={globalStyles.linkText}
@@ -107,17 +98,7 @@ const impact = (props: Props) => {
         <section className={globalStyles.doubleClipSection}>
           <ClipDoubleSide theme="primary">
             <div className={styles.customerImpactContainer}>
-              {partnerQuotes.map(({ id, headshot, order, quote, author }) => (
-                <Quotes
-                  key={id}
-                  headshot={headshot}
-                  order={order}
-                  quote={quote}
-                  author={author}
-                  quoteColor="accent"
-                  textColor="secondary"
-                />
-              ))}
+              <QuoteCards data={partnerQuotes} />
               <Link
                 href={'/impact/partners'}
                 className={`${globalStyles.linkText} ${styles.link}`}

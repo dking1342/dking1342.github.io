@@ -1,7 +1,15 @@
 import React from 'react';
-import { AiFillPhone, AiOutlineMail } from 'react-icons/ai';
+import {
+  AiFillPhone,
+  AiFillYoutube,
+  AiOutlineFieldTime,
+  AiOutlineInstagram,
+  AiOutlineMail,
+  AiOutlineTwitter,
+} from 'react-icons/ai';
+import { FaFacebookF, FaRunning } from 'react-icons/fa';
 import { HiDocumentText } from 'react-icons/hi';
-import { MdLocationOn } from 'react-icons/md';
+import { MdLocationOn, MdOutlineHandshake } from 'react-icons/md';
 
 type Props = {
   name: string;
@@ -21,6 +29,48 @@ const Icon = ({ name, width, height, color }: Props) => {
         return <AiOutlineMail width={width} height={height} color={color} />;
       case 'HiDocumentText':
         return <HiDocumentText width={width} height={height} color={color} />;
+      case 'FaFacebookF':
+        return (
+          <FaFacebookF
+            style={{ width: `${width}`, fill: `${color}`, height: `${height}` }}
+          />
+        );
+      case 'AiOutlineInstagram':
+        return (
+          <AiOutlineInstagram
+            style={{ width: `${width}`, fill: `${color}`, height: `${height}` }}
+          />
+        );
+      case 'AiOutlineTwitter':
+        return (
+          <AiOutlineTwitter
+            style={{ width: `${width}`, fill: `${color}`, height: `${height}` }}
+          />
+        );
+      case 'AiFillYoutube':
+        return (
+          <AiFillYoutube
+            style={{ width: `${width}`, fill: `${color}`, height: `${height}` }}
+          />
+        );
+      case 'AiOutlineFieldTime':
+        return (
+          <AiOutlineFieldTime
+            style={{ width: `${width}`, fill: `${color}`, height: `${height}` }}
+          />
+        );
+      case 'FaRunning':
+        return (
+          <FaRunning
+            style={{ width: `${width}`, fill: `${color}`, height: `${height}` }}
+          />
+        );
+      case 'MdOutlineHandshake':
+        return (
+          <MdOutlineHandshake
+            style={{ width: `${width}`, fill: `${color}`, height: `${height}` }}
+          />
+        );
       default:
         return <div></div>;
     }

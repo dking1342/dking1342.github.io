@@ -1,9 +1,9 @@
 import React from 'react';
 import globalStyles from '@/styles/Global.module.css';
-import FormContact from '@/components/FormContact';
-import HeroContact from '@/components/HeroContact';
+import FormContact from '@/components/forms/FormContact';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import HeroContact from './heros/HeroContact';
 
 type Props = {};
 

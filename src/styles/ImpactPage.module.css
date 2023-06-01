@@ -1,6 +1,6 @@
 .container{
-  max-width: 1000px;
-  width: 95%;
+  max-width: var(--max-width);
+  width: var(--width-percentage);
   display: flex;
   flex-direction: column;
   align-items: center;

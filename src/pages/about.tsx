@@ -1,15 +1,16 @@
 import Head from 'next/head';
 import styles from '@/styles/About.module.css';
 import globalStyles from '@/styles/Global.module.css';
+import formStyles from '@/styles/InfoCard.module.css';
 import Image from 'next/image';
-import ClipDoubleSide from '@/components/ClipDoubleSide';
-import InfoCard from '@/components/InfoCard';
-import LinkBtn from '@/components/LinkBtn';
-import ClipV from '@/components/ClipV';
-import MissionTexts from '@/components/MissionTexts';
-import ClipVInner from '@/components/ClipVInner';
-import HeroAbout from '@/components/HeroAbout';
+import ClipDoubleSide from '@/components/ui/ClipDoubleSide';
+import LinkBtn from '@/components/ui/LinkBtn';
 import { infoCardGroup } from '@/data/aboutPage';
+import InfoCards from '@/components/cards/InfoCards';
+import MissionTexts from '@/components/cards/MissionTexts';
+import HeroAbout from '@/components/heros/HeroAbout';
+import ClipV from '@/components/ui/ClipV';
+import ClipVInner from '@/components/ui/ClipVInner';
 
 type Props = {};
 
@@ -28,7 +29,7 @@ const About = (props: Props) => {
         <section className={styles.historySection}>
           <div className={styles.historyMainContainer}>
             <h1>
-              <span className={styles.highlight}>2 years</span> of service
+              <span className={globalStyles.highlight}>2 years</span> of service
             </h1>
             <p>
               What started as a commitment to the stray cats of the city of
@@ -47,7 +48,7 @@ const About = (props: Props) => {
           </div>
           <div className={styles.historyMainContainer}>
             <h1>
-              <span className={styles.highlight}>2 years</span> of growth
+              <span className={globalStyles.highlight}>2 years</span> of growth
             </h1>
             <p>
               Our growth has been an unexpected, but reassuring, experience. We
@@ -60,13 +61,9 @@ const About = (props: Props) => {
         <section className={globalStyles.doubleClipSection}>
           <ClipDoubleSide theme="primary">
             <div className={globalStyles.doubleClipContainer}>
-              {infoCardGroup.map(({ id, theme, body, title, classStyle }) => (
-                <div className={globalStyles[classStyle]} key={id}>
-                  <InfoCard theme={theme} title={title} body={body} />
-                </div>
-              ))}
+              <InfoCards data={infoCardGroup} />
               <div
-                className={`${styles.linkContainer} ${globalStyles.infoCard3}`}
+                className={`${styles.linkContainer} ${formStyles.infoCard3}`}
               >
                 <p>FIND OUT WHY WE ARE SO PASSIONATE</p>
                 <LinkBtn

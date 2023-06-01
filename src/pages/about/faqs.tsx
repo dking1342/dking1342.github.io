@@ -2,8 +2,9 @@ import Head from 'next/head';
 import React from 'react';
 import styles from '@/styles/Faqs.module.css';
 import globalStyles from '@/styles/Global.module.css';
-import HeroAbout from '@/components/HeroAbout';
 import { faqsArr } from '@/data/aboutFaqsPage';
+import FaqCards from '@/components/cards/FaqCards';
+import HeroAbout from '@/components/heros/HeroAbout';
 
 type Props = {};
 
@@ -26,16 +27,7 @@ const faqs = (props: Props) => {
             Frequently Asked{' '}
             <span className={globalStyles.highlight}>Questions</span>
           </h1>
-          <div className={styles.faqsContainer}>
-            {faqsArr.map(({ id, question, answer }) => (
-              <div className={styles.faqsCardContainer} key={id}>
-                <h2>Question:</h2>
-                <p>{question}</p>
-                <h2>Answer:</h2>
-                <p>{answer}</p>
-              </div>
-            ))}
-          </div>
+          <FaqCards data={faqsArr} />
         </section>
       </main>
     </>

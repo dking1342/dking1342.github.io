@@ -1,13 +1,13 @@
 import React from 'react';
 import styles from '@/styles/InfoCard.module.css';
+import { InfoCardType } from '@/types/cards';
 
 type Props = {
-  theme: 'primary' | 'secondary';
-  title: string;
-  body: string;
+  item: InfoCardType;
 };
 
-const InfoCard = ({ theme, title, body }: Props) => {
+const InfoCard = ({ item }: Props) => {
+  const { theme, title, body, classStyle } = item;
   let color = '';
   let background = '';
 
@@ -23,7 +23,10 @@ const InfoCard = ({ theme, title, body }: Props) => {
   }
 
   return (
-    <div className={styles.container} style={{ color: `var(${color})` }}>
+    <div
+      className={`${styles.container} ${styles[classStyle]}`}
+      style={{ color: `var(${color})` }}
+    >
       <hr
         className={styles.cardBorder}
         style={{ background: `var(${background})` }}

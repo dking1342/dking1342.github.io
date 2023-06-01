@@ -23,8 +23,36 @@
   text-transform: uppercase; 
 }
 
+.infoCard1{
+  justify-self:flex-end;
+}
+.infoCard2{
+  justify-self:flex-start;
+}
+.infoCard3{
+  align-self: center;
+  justify-self: center;
+}
+
+
 @media (max-width:800px) {
   .container{
     margin-bottom: 0px !important;
   }
+}
+
+@media (max-width:450px) {
+  /* slanted clip styles */
+  .infoCard1,
+  .infoCard2{
+    justify-self:center;
+  }
+
+  /* double clip styles */
+  .doubleClipCardContainer:nth-child(1),
+  .doubleClipCardContainer:nth-child(2),
+  .doubleClipCardContainer:nth-child(3){
+    justify-self: center;
+  }
+
 }
