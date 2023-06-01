@@ -6,8 +6,10 @@ import { FetchData, GeneralFormValues } from '@/types/form';
 import { OutputModel } from '@/types/api';
 import { fetchRequest } from '@/utils/api';
 import Image from 'next/image';
+import { Montserrat } from 'next/font/google';
 
 type Props = {};
+const montserrat = Montserrat({ subsets: ['latin'] });
 
 const FormFooter = (props: Props) => {
   const router = useRouter();
@@ -92,6 +94,7 @@ const FormFooter = (props: Props) => {
             rows={5}
             required={true}
             value={formValues.message}
+            className={montserrat.className}
             onChange={(e) => onChange(e, 'message')}
           ></textarea>
         </div>

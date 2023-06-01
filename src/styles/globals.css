@@ -17,6 +17,10 @@
   --card-max-width:300px;
   --card-width:95%;
   --clip-path:polygon(0 0, 100% 0, 100% 90%, 65% 100%, 0 85%);
+  --form-font-size:14px;
+  --form-label-size:12px;
+  --form-error-size:12px;
+  --form-input-height:42px;
 }
 
 * {

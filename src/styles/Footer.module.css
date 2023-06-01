@@ -63,18 +63,20 @@
 }
 .textContainer label{
   text-transform: uppercase;
-  font-size: 0.75rem;
+  font-size: var(--form-label-size);
 }
 .textContainer input{
-  height: 40px;
+  height: var(--form-input-height);
   outline: none;
   border: none;
-  font-size: 20px;
+  font-size: var(--form-font-size);
   padding: 0 10px;
+  color:var(--primary-color);
 }
 .textContainer textarea{
-  font-size: 20px;
+  font-size: var(--form-font-size);
   padding:10px;
+  
 }
 .contactCaptchaContainer{
   height: 40px;

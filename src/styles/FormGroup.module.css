@@ -5,16 +5,17 @@
   gap:0.5rem;
 }
 .formGroup label{
-  font-size: 12px;
+  font-size: var(--form-label-size);
 }
 .formGroup input{
-  height: 42px;
+  height: var(--form-input-height);
   width: 100%;
   line-height: 1;
-  font-size: 24px;
+  font-size: var(--form-font-size);
   padding-left:5px;
   border:none;
   outline:none;
+  color:var(--primary-color);
 }
 .formGroup input:focus{
   border:2px solid rgb(119, 255, 255);
@@ -22,5 +23,5 @@
 
 .formGroup small{
   color:var(--accent-color);
-  font-size: 12px;
+  font-size: var(--form-error-size);
 }
