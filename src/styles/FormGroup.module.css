@@ -18,10 +18,15 @@
   color:var(--primary-color);
 }
 .formGroup input:focus{
-  border:2px solid rgb(119, 255, 255);
+  border:1px solid rgb(119, 255, 255);
 }
 
 .formGroup small{
   color:var(--accent-color);
   font-size: var(--form-error-size);
+}
+.formGroup input[type="number"]::-webkit-outer-spin-button,
+.formGroup input[type="number"]::-webkit-inner-spin-button
+{
+  appearance: none;
 }

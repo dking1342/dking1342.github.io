@@ -9,9 +9,13 @@
   --accent-color: #ff0000;
   --footer-primary-color: #ddd;
   --footer-secondary-color: #333;
+  --donate-form-body-bg:#d4d4d4;
+  --donate-form-header-bg:linear-gradient(0deg, #d4d4d4 0%, #9f9f9f 100%);
+  --donate-form-footer-bg:linear-gradient(0deg, #9f9f9f 0%, #d4d4d4 100%);
 
   --hero-max-height: 60vh;
   --max-width:1000px;
+  --form-width:600px;
   --max-width-lg:1250px;
   --width-percentage:95%;
   --card-max-width:300px;

@@ -52,6 +52,11 @@ export const sitemap: Sitemap[] = [
       },
       {
         id: uuid(),
+        href: '/about/policy',
+        link: 'policies',
+      },
+      {
+        id: uuid(),
         href: '/about/faqs',
         link: 'faqs',
       },

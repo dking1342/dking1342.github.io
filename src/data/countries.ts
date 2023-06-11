@@ -15,7 +15,7 @@ export const countryList = [
   { id: 'AU', value: 'Australia' },
   { id: 'AT', value: 'Austria' },
   { id: 'AZ', value: 'Azerbaijan' },
-  { id: 'BS', value: 'Bahamas (the)' },
+  { id: 'BS', value: 'Bahamas' },
   { id: 'BH', value: 'Bahrain' },
   { id: 'BD', value: 'Bangladesh' },
   { id: 'BB', value: 'Barbados' },

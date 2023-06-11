@@ -1,0 +1,33 @@
+.formBodyNav{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top:2rem;
+}
+.back{
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-weight: 700;
+  cursor: pointer;
+}
+.next,
+.submitBtn{
+  height: 40px;
+  width: 150px;
+  border: none;
+  background: var(--accent-color);
+  color: var(--secondary-color);
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  gap:1rem;
+  align-items: center;
+  justify-content: center;
+}

@@ -90,13 +90,38 @@ export const profileInfo: CompanyProfile[] = [
     title: 'Website',
     body: 'www.missioncompassionfoundation.in',
   },
+  {
+    id: uuid(),
+    title: 'Bank',
+    body: 'HDFC Bank LTD',
+  },
+  {
+    id: uuid(),
+    title: 'Bank Branch',
+    body: 'Mumbai - Sher-E-Punjab',
+  },
+  {
+    id: uuid(),
+    title: 'Bank Account Number',
+    body: '50200070205293',
+  },
+  {
+    id: uuid(),
+    title: 'IFSC Code',
+    body: 'HDFC0000669',
+  },
+  {
+    id: uuid(),
+    title: 'MICR Code',
+    body: '400240091',
+  },
 ];
 export const documentInfo: DocumentInfo[] = [
   {
     id: uuid(),
     icon: 'HiDocumentText',
-    iconWidth: '100px',
-    iconHeight: '100%',
+    iconWidth: '50px',
+    iconHeight: '50px',
     iconColor: 'var(--accent-color)',
     body: `
     REGISTRATION

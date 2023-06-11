@@ -124,7 +124,8 @@
   gap:1.5rem;
 }
 .documentCardImageContainer{
-  width: 100%;
+  width: 100px;
+  height: 100px;
   text-align: center;
   color:var(--accent-color);
 }
