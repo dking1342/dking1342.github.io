@@ -13,11 +13,12 @@ import DonateInputCards from '../cards/DonateInputCards';
 import { SiPaytm } from 'react-icons/si';
 import { DonateInputErrorState, DonateInputInitialState } from '@/types/donate';
 import { AiFillLock } from 'react-icons/ai';
+import { prefix } from '@/utils/prefix';
 
 type Props = {};
 
 const FormDonate = (props: Props) => {
-  const [page, setPage] = useState(3);
+  const [page, setPage] = useState(1);
   const [donation, setDonation] = useState(1000);
   const [donateAmounts, setDonationAmounts] = useState(donateAmount);
   const [donateErrorMsg, setDonateErrorMsg] = useState<string | null>(null);
@@ -37,7 +38,8 @@ const FormDonate = (props: Props) => {
       },
       body: JSON.stringify({ donation, formValues }),
     };
-    const response = await fetch('http://localhost:3000/api/donate', options);
+    const url = prefix();
+    const response = await fetch(`${url.url.API_URL}/api/donate`, options);
     const json = await response.json();
     console.log({ json });
   };
