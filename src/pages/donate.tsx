@@ -3,10 +3,51 @@ import React from 'react';
 import styles from '@/styles/Donate.module.css';
 import HeroDonate from '@/components/heros/HeroDonate';
 import FormDonate from '@/components/forms/FormDonate';
+import { prefix } from '@/utils/prefix';
 
-type Props = {};
+type Props = {
+  data: any;
+  loading: boolean;
+  error: string;
+};
 
-const donate = (props: Props) => {
+export const getServerSideProps = async (context: any) => {
+  let loading = false;
+  let error = '';
+  let data: any[] | null = null;
+  // const url = context.req.url;
+  // const path = url.split('/').pop().split('.')[0];
+
+  try {
+    loading = true;
+    const pref = prefix();
+    const url = `${pref.url.API_URL}/api/donate/`;
+    const response = await fetch(url);
+    const payload = await response.json();
+
+    if (payload && payload.data) {
+      data = payload.data;
+    } else {
+      error = 'Error when fetching';
+    }
+  } catch (e) {
+    let err = e as Error;
+    error = err.message;
+  } finally {
+    loading = false;
+  }
+
+  return {
+    props: {
+      data,
+      loading,
+      error,
+    },
+  };
+};
+
+const donate = ({ data, loading, error }: Props) => {
+  console.log({ data, loading, error });
   return (
     <>
       <Head>

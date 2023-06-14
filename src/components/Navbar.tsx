@@ -45,7 +45,11 @@ const Navbar = ({
             />
           </Link>
           <NavbarCards data={navbarSitemap} />
-          <Link href={'/donate'} className={styles.donate}>
+          <Link
+            href={'/donate'}
+            className={styles.donate}
+            onClick={onMobileClick}
+          >
             donate
           </Link>
           <button

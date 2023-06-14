@@ -28,48 +28,18 @@ const FormDonate = (props: Props) => {
     donateInputsErrorState
   );
 
-  const onSubmit = (e: any) => {
+  const onSubmit = async (e: any) => {
     e.preventDefault();
-    console.log('donate');
-
-    // console.log('submit form');
-    // console.log({ donation, formValues });
-  };
-
-  const defaultMerchantConfiguration = {
-    root: '',
-    style: {
-      bodyColor: '',
-      themeBackgroundColor: '',
-      themeColor: '',
-      headerBackgroundColor: '',
-      headerColor: '',
-      errorColor: '',
-      successColor: '',
-    },
-    flow: 'DEFAULT',
-    data: {
-      orderId: '',
-      token: '',
-      tokenType: 'TXN_TOKEN',
-      amount: '',
-      userDetail: {
-        mobileNumber: '',
-        name: '',
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
       },
-    },
-    merchant: {
-      mid: '',
-      name: '',
-      redirect: true,
-    },
-    labels: {},
-    payMode: {
-      labels: {},
-      filter: [],
-      order: [],
-    },
-    handler: {},
+      body: JSON.stringify({ donation, formValues }),
+    };
+    const response = await fetch('http://localhost:3000/api/donate', options);
+    const json = await response.json();
+    console.log({ json });
   };
 
   return (

@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from '@/styles/FormSubmit.module.css';
 import { DonateInputErrorState } from '@/types/donate';
-import { FaDonate } from 'react-icons/fa';
 
 import { BiDonateHeart } from 'react-icons/bi';
 
